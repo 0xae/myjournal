@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
         NavBar::begin([
-            'brandLabel' => 'My Company',
+            'brandLabel' => '<span class="fa fa-newspaper-o"></span> My Journal',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top',
@@ -60,6 +60,7 @@ AppAsset::register($this);
     </div>
 </div>
 
+<!--
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
@@ -67,6 +68,7 @@ AppAsset::register($this);
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
+-->
 
 <?php $this->endBody() ?>
 </body>

@@ -56,6 +56,10 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
+        if (!yii::$app->user->isguest) {
+            return $this->redirect(['home/index']);
+        }
+
         return $this->render('index');
     }
 
@@ -77,8 +81,8 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionLogin() {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+        if (!yii::$app->user->isguest) {
+            return $this->gohome();
         }
 
         $model = new LoginForm();

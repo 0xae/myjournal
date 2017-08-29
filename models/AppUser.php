@@ -78,10 +78,16 @@ class AppUser extends \yii\db\ActiveRecord
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 
+    /**
+     * @inheritdoc
+     */
     public function setAuthKey() {
         $this->auth_key = yii::$app->security->generaterandomstring();
     }
 
+    /**
+     * @inheritdoc
+     */
     public function setPassword($rawPassword) {
         $this->password_hash = Yii::$app->security->generatePasswordHash($rawPassword);
     }
@@ -100,7 +106,7 @@ class AppUser extends \yii\db\ActiveRecord
         return [
             [['name', 'email', 'username', 'password_hash'], 'required'],
             [['password_hash', 'picture'], 'string'],
-            [['is_active'], 'integer'],
+            [['is_active', 'settings_id'], 'integer'],
             [['creation_date'], 'safe'],
             [['name', 'type'], 'string', 'max' => 50],
             [['email', 'username'], 'string', 'max' => 200],
@@ -140,7 +146,7 @@ class AppUser extends \yii\db\ActiveRecord
      * @return \yii\db\ActiveQuery
      */
     public function getSettings() {
-        return $this->hasMany(UserSettings::className(), ['user' => 'id'])
-                    ->all();
+        return $this->hasOne(UserSettings::className(), ['settings_id' => 'id'])
+                    ->one();
     }
 }

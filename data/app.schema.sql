@@ -2,6 +2,15 @@ drop database if exists myjournal ;
 create database myjournal;
 use myjournal;
 
+create table mj_user_settings (
+    id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cover_image text,
+    journal_color varchar(20),
+    language varchar(20),
+    location varchar(20),
+    is_account_private boolean    
+);
+
 create table mj_user (
     id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name varchar(50) not null,
@@ -14,18 +23,13 @@ create table mj_user (
     token varchar(250),
     type varchar(50),
     is_active boolean,
-
+    
+    settings_id BIGINT(20) NOT NULL,
     creation_date datetime NOT NULL DEFAULT now(),
-
+    
+    FOREIGN KEY(settings_id) REFERENCES mj_user_settings(ID),
     UNIQUE(email),
     UNIQUE(username)
-);
-
-create table mj_user_settings (
-    id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    user BIGINT(20) NOT NULL,
-
-    FOREIGN KEY(user) REFERENCES mj_user(ID)
 );
 
 create table mj_category (
@@ -47,6 +51,8 @@ create table mj_post (
     author BIGINT(20) NOT NULL,
     category BIGINT(20) NOT NULL,
     creation_date datetime NOT NULL DEFAULT now(),
+    location varchar(250),
+    lang varchar(250),
 
     FOREIGN KEY(author) REFERENCES mj_user(ID),
     FOREIGN KEY(category) REFERENCES mj_category(ID)
