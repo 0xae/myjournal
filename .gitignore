@@ -1,0 +1,9 @@
+runtime/*
+runtime/*
+uploads/*
+*.swp
+*.swn
+*.swo
+Thumbs.db
+
+
