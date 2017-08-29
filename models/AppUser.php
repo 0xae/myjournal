@@ -99,7 +99,7 @@ class AppUser extends \yii\db\ActiveRecord
     public function rules() {
         return [
             [['name', 'email', 'username', 'password_hash'], 'required'],
-            [['password_hash'], 'string'],
+            [['password_hash', 'picture'], 'string'],
             [['is_active'], 'integer'],
             [['creation_date'], 'safe'],
             [['name', 'type'], 'string', 'max' => 50],

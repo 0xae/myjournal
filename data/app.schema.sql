@@ -7,6 +7,7 @@ create table mj_user (
     name varchar(50) not null,
     email varchar(200) not null,
     username varchar(200) NOT NULL,
+    picture text,
 
     password_hash text not null,
     auth_key varchar(250),

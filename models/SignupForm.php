@@ -45,12 +45,11 @@ class SignupForm extends Model {
         if (!$this->validate()) {
             return null;
         }
-        
+
         $user = new AppUser();
         $user->name = $this->name;
         $user->email = $this->email;
         $user->username = $this->username;
-        
         $user->setPassword($this->password);
         $user->setAuthKey();
 
