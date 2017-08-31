@@ -11,7 +11,7 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="site-login">
+<div class="container">
     <h1>
         My Journal <small>Login</small>
     </h1>

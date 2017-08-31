@@ -1,5 +1,9 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h1>home/index</h1>
+
+<div class="row">
+    <div class="col-md-3">
+    </div>
+</div>
 

@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Registar';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
+<div class="container">
     <h1>Signup</h1>
 
     <?php $form = ActiveForm::begin([

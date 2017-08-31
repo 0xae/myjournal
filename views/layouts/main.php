@@ -20,11 +20,16 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+<style>
+body {
+    background-color: #e6ecf0;
+}
+</style>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="">
     <?php
         NavBar::begin([
             'brandLabel' => '<span class="fa fa-newspaper-o"></span> My Journal',
@@ -54,11 +59,9 @@ AppAsset::register($this);
         ]);
         NavBar::end();
     ?>
-
-    <div class="container">
-        <?= $content ?>
-    </div>
 </div>
+
+<?= $content ?>
 
 <!--
 <footer class="footer">
