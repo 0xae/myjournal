@@ -10,10 +10,13 @@
     </div>
 
     <div class="col-md-3">
-        <div class="media mj-user-badge">
+        <div class="media mj-user-badge" style="margin-bottom: 10px;">
               <div class="media-left media-middle">
                     <a href="#">
-                      <img class="media-object mj-header-logo" src="static/img/d9e5634djw1east9pi6bej2050050dfw.jpg" />
+                      <img 
+                          class="media-object mj-header-logo" 
+                          src="<?= \Yii::$app->user->identity->picture; ?>" 
+                        />
                     </a>
               </div>
               <div class="media-body">
@@ -34,10 +37,57 @@
         </div>
         
         <div class="mj-block">
+            <h3 class="title">
+                Categories 
+                <small>· settings</small>
+            </h3>
+<div style="padding: 20px;padding-top:0px;">
+    <h3 class="special-link"> 
+        #WorldPhotoDay<br/>
+        <small>@GTRao is Tweeting about this</small>
+     </h3> 
+
+    <h3 class="special-link"> 
+        #NationalAviationDay 
+    </h3> 
+
+    <h3 class="special-link"> 
+        Boston  <br/>
+        <small>@SSD is Tweeting about this</small>
+    </h3> 
+
+    <h3 class="special-link"> 
+        #freespeechrally 
+    </h3> 
+
+    <h3 class="special-link"> 
+        #STOARS 
+    </h3> 
+
+    <h3 class="special-link"> 
+        Stoke 
+    </h3> 
+
+    <h3 class="special-link"> 
+        #WengerOut 
+    </h3> 
+
+    <h3 class="special-link"> 
+        #LV2017 
+    </h3> 
+
+    <h3 class="special-link"> 
+        #Muzaffarnagar <br/>
+        <small>@0xae is Tweeting about this</small>
+    </h3> 
+</div>
         </div>
     </div>
 
-    <div class="col-md-8" id="mj-timeline">
+    <div class="col-md-6" id="mj-timeline">
+    </div>
+    
+    <div class="col-md-3">
     </div>
 </div>
 

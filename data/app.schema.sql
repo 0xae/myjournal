@@ -22,7 +22,7 @@ create table mj_user (
     auth_key varchar(250),
     token varchar(250),
     type varchar(50),
-    is_active boolean,
+    is_active boolean not null default true,
     
     settings_id BIGINT(20) NOT NULL,
     creation_date datetime NOT NULL DEFAULT now(),

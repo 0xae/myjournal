@@ -38,7 +38,6 @@ body {
 }
 
 .mj-b-shadow {
-
 }
 
 .mj-user-badge {
@@ -62,6 +61,26 @@ body {
 }
 
 .mj-block {
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.mj-block h3.title {
+    margin-top:7px;
+    margin-bottom:7px;
+    margin-left: 7px;
+    
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+.mj-block h3.title small {
+    display:inline;
+    font-weight:bold;
+    font-size:11px;
 }
 
 .mj-header-logo {
