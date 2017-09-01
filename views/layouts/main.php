@@ -83,6 +83,11 @@ body {
     font-size:11px;
 }
 
+.mj-block div.mj-content {
+    padding: 20px;
+    padding-top:0px;
+}
+
 .mj-header-logo {
     width: 40px;
     border-radius: 40px;
@@ -91,6 +96,16 @@ body {
     display: inline;
 }
 .mj-settings-icon{
+}
+
+h3.mj-category {
+    font-size: 13px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
+
+h3.mj-category small {
+    font-size: 13px;
 }
 
 #mj-timeline {

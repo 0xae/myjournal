@@ -35,52 +35,38 @@
                     -->
               </div>
         </div>
-        
+
+        <div class="mj-block">
+            <h3 class="title">
+                Welcome
+            </h3>
+
+            <div class="mj-content">
+                <h3 class="title">
+                    <small>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    </small>                
+                </h3>
+            </div>
+        </div>
+
         <div class="mj-block">
             <h3 class="title">
                 Categories 
                 <small>· settings</small>
             </h3>
-<div style="padding: 20px;padding-top:0px;">
-    <h3 class="special-link"> 
-        #WorldPhotoDay<br/>
-        <small>@GTRao is Tweeting about this</small>
-     </h3> 
+            
+            <div class="mj-content">
+                <h3 class="mj-category"> 
+                    Food<br/>
+                    <small>10 posts</small>
+                 </h3> 
 
-    <h3 class="special-link"> 
-        #NationalAviationDay 
-    </h3> 
-
-    <h3 class="special-link"> 
-        Boston  <br/>
-        <small>@SSD is Tweeting about this</small>
-    </h3> 
-
-    <h3 class="special-link"> 
-        #freespeechrally 
-    </h3> 
-
-    <h3 class="special-link"> 
-        #STOARS 
-    </h3> 
-
-    <h3 class="special-link"> 
-        Stoke 
-    </h3> 
-
-    <h3 class="special-link"> 
-        #WengerOut 
-    </h3> 
-
-    <h3 class="special-link"> 
-        #LV2017 
-    </h3> 
-
-    <h3 class="special-link"> 
-        #Muzaffarnagar <br/>
-        <small>@0xae is Tweeting about this</small>
-    </h3> 
-</div>
+                <h3 class="mj-category"> 
+                    #Trender tech<br/>
+                    <small>2 posts</small>
+                </h3> 
+            </div>
         </div>
     </div>
 
