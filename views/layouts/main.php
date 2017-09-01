@@ -24,6 +24,43 @@ AppAsset::register($this);
 body {
     background-color: #e6ecf0;
 }
+.mj-header {
+    padding: 10px;
+    background-color: #337ab7;
+    height: 300px;
+    margin-bottom: -50px;
+}
+.mj-user-badge{
+    padding: 10px;
+    padding-top:0px;
+}
+.mj-media-heading {
+    color: blanchedalmond;
+}
+.mj-media-heading small {
+    color: #e6ecf0;
+}
+
+.mj-block {
+}
+
+.mj-header-logo {
+    width: 40px;
+    border-radius: 40px;
+}
+.inline {
+    display: inline;
+}
+.mj-settings-icon{
+}
+
+#mj-timeline {
+    padding: 10px;
+    min-height: 650px;
+    background-color: #fff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;    
+}
 </style>
 </head>
 <body>
