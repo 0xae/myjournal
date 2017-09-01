@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="mj-header">
-            <img src="static/ck/88_berlin.jpg" />
+            <img src="static/ck/2048x1365_739538.jpeg" />
         </div>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="media mj-user-badge" style="margin-bottom: 10px;">
               <div class="media-left media-middle">
                     <a href="#">
-                      <img 
+                      <img
                           class="media-object mj-header-logo" 
                           src="<?= \Yii::$app->user->identity->picture; ?>" 
                         />
@@ -27,7 +27,7 @@
                             @<?= \Yii::$app->user->identity->username; ?>
                         </small>
                     </h4>
-                    <a href="javascript:void(0)" class="mj-b-shadow mj-seen">· Seen 15mn ago</a>
+                    <a href="javascript:void(0)" class="mj-b-shadow mj-seen">· seen 15mn ago</a>
                     <!--
                     <a href="javascript:void(0)">
                         <span class="mj-settings-icon glyphicon glyphicon-cog"></span>
@@ -71,8 +71,9 @@
     </div>
 
     <div class="col-md-6" id="mj-timeline">
+        <?php require_once "timeline.php"; ?>
     </div>
-    
+
     <div class="col-md-3">
     </div>
 </div>
