@@ -5,6 +5,7 @@
 <div class="row">
     <div class="col-md-12">
         <div class="mj-header">
+            <img src="static/ck/88_berlin.jpg" />
         </div>
     </div>
 
@@ -16,17 +17,23 @@
                     </a>
               </div>
               <div class="media-body">
-                    <h4 class="media-heading mj-media-heading inline" >
+                    <h4 class="media-heading mj-media-heading inline mj-b-shadow">
                         <?= \Yii::$app->user->identity->name; ?>
                         <br/>
                         <small>
                             @<?= \Yii::$app->user->identity->username; ?>
                         </small>
                     </h4>
+                    <a href="javascript:void(0)" class="mj-b-shadow mj-seen">· Seen 15mn ago</a>
+                    <!--
                     <a href="javascript:void(0)">
                         <span class="mj-settings-icon glyphicon glyphicon-cog"></span>
                     </a>
+                    -->
               </div>
+        </div>
+        
+        <div class="mj-block">
         </div>
     </div>
 

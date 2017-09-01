@@ -25,20 +25,40 @@ body {
     background-color: #e6ecf0;
 }
 .mj-header {
-    padding: 10px;
     background-color: #337ab7;
-    height: 300px;
+    height: 400px;
     margin-bottom: -50px;
+    /*
+    background: url(static/ck/2048x1365_739538.jpeg) no-repeat;
+    background-position: 50% 50%;
+    */
+    max-height: 400px;
+    overflow:hidden;
+    overflow-y:scroll;
 }
-.mj-user-badge{
+
+.mj-b-shadow {
+
+}
+
+.mj-user-badge {
     padding: 10px;
     padding-top:0px;
 }
 .mj-media-heading {
     color: blanchedalmond;
 }
-.mj-media-heading small {
+.mj-media-heading small,
+.mj-user-badge a {
     color: #e6ecf0;
+}
+
+.mj-seen {
+    font-size: 11px;
+}
+
+.mj-seen:hover {
+    text-decoration: none;
 }
 
 .mj-block {
