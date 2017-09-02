@@ -30,5 +30,8 @@ class ApiController extends \yii\web\Controller {
         $filename = $_GET['file'];
         return Uploader::remove($filename, 'posts');
     }
+
+    public function actionPost() {
+    }
 }
 

@@ -32,6 +32,13 @@ class PostController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Post::find(),
+        ]);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
@@ -52,6 +59,7 @@ class PostController extends Controller {
      */
     public function actionCreate() {
         $model = new Post();
+        $model->creation_date = date('Y-m-d H:i:s');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

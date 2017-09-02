@@ -28,7 +28,7 @@ class Post extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['content', 'category'], 'required'],
+            [['content' ,'author', 'category'], 'required'],
             [['content'], 'string'],
             [['author', 'category'], 'integer'],
             [['creation_date', 'location', 'lang'], 'safe'],

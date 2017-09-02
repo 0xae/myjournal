@@ -1,13 +1,7 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
-/* @var $this yii\web\View */
-/* @var $model app\models\Post */
-/* @var $form yii\widgets\ActiveForm */
 ?>
-
 
 <!-- Modal -->
 <div class="modal fade" id="composerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -36,7 +30,7 @@ use yii\widgets\ActiveForm;
                                 "action" => "index.php?r=api/upload",
                                                                                         
                              ]); ?>
-                                <?= $form->field($model, 'file')->fileInput(["id" => "form_upload_file"]) ?>
+                                <?= $form->field($uploadModel, 'file')->fileInput(["id" => "form_upload_file"]) ?>
                             <?php ActiveForm::end(); ?>
 
                             <a id="mj-composer-upload-img" href="javascript:void(0)">
@@ -67,6 +61,20 @@ use yii\widgets\ActiveForm;
                         <button type="button" class=" btn btn-primary mj-btn mj-btn-danger">Cancel</button>
                     </div>
                     -->
+
+                    <?php $postForm = ActiveForm::begin([
+                        "options" => ["enctype" => "multipart/form-data", 
+                                      "class" => "hidden",
+                                      "id" => "mj-composer-form"], 
+                        "action" => "index.php?r=api/upload",
+                    ]); ?>
+
+                        <?= $postForm->field($postModel, 'content')->textarea(['rows' => 6]) ?>
+                        <?= $postForm->field($postModel, 'author')->textInput() ?>
+                        <?= $postForm->field($postModel, 'category')->textInput() ?>
+
+                    <?php ActiveForm::end(); ?>
+
                 </div>
             </div>
         <!-- .modal-content -->
@@ -76,4 +84,7 @@ use yii\widgets\ActiveForm;
     </div>    
 <!-- .modal -->
 </div>
+
+
+
 

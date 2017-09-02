@@ -1,12 +1,16 @@
 <?php
 namespace app\controllers;
 use app\models\ImgUpload;
+use app\models\Post;
 
 class HomeController extends \yii\web\Controller {
     public function actionIndex() {
         $uploadModel = new ImgUpload;
+        $postModel = new Post;
+
         return $this->render('index', [
-            'uploadModel' => $uploadModel
+            'uploadModel' => $uploadModel,
+            'postModel' => $postModel
         ]);
     }
 
