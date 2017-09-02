@@ -157,10 +157,19 @@ h3.mj-category small {
 
 .mj-composer .input-group input{
     border-right: 0px;
+    border-color: #A3EBCE;
+    color: #19CF86;
+    box-shadow: 0px 0px 0px #fff;
 }
 
 .mj-composer .input-group span{
     background-color: #fff;
+    border-color: #A3EBCE;    
+    color: #19CF86;
+}
+
+.mj-composer .input-group span span{
+    font-size: 14px;
 }
 </style>
 

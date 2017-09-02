@@ -36,7 +36,9 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
 
             <li role="presentation" class="" style="margin-left: 12px;">
                 <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:13px;padding: 0px;">
-                    <span class="fa fa-mail-reply" style="padding-right:5px;"></span> 0
+                    <strong>
+                    <span class="fa fa-commenting" style="padding-right:5px;"></span> 0
+                    </strong>
                 </a>
             </li>
 
