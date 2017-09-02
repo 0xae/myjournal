@@ -25,6 +25,7 @@ AppAsset::register($this);
 body {
     background-color: #e6ecf0;
 }
+
 .mj-header {
     background-color: #337ab7;
     height: 400px;
@@ -149,7 +150,7 @@ h3.mj-category small {
 }
 
 .mj-composer {
-    padding: 10px;
+    padding: 13px;
     border-bottom: 1px solid #f5eeee;
     background-color: #E8FAF2;
     border-top-left-radius: 4px;
@@ -263,6 +264,39 @@ h3.mj-category small {
 .mj-post-details {
     margin-top: 10px;
     min-height: 40px;
+}
+
+.mj-post-details div div.mj-editor-plugin {
+    margin-right: 13px;
+    display: inline;
+}
+
+.mj-post-details div a:hover,
+.mj-post-details div a:focus,
+.mj-post-details div a:active {
+    text-decoration: none;
+}
+
+#mj-composer-editor {
+    border: 1px solid #A3EBCE; 
+    border-radius: 3px;
+    color: #666;
+    background-color: #fff;
+    padding: 5px;
+    min-height: 200px;
+}
+
+#mj-composer-editor:focus,
+#mj-composer-editor:active {
+    border: 1px solid #A3EBCE !important; 
+}
+
+.mj-composer-content div {
+    display: block;
+}
+
+.mj-text-success {
+    color: #19CF86;
 }
 
 </style>

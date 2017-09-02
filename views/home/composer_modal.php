@@ -12,12 +12,33 @@
 
             <div class="modal-body">
                 <div class="mj-post-content">
-                    <textarea class="form-control" rows="5">Write...</textarea>
+                    <div class="mj-composer-content" id="mj-composer-editor" contenteditable="true">Write...</div>
                 </div>
                 
-                <div class="mj-post-details ">
+                <div class="mj-post-details">
+                    <div class="pull-left" style="font-size: 18px;padding: 10px;">
+                        <div class="mj-editor-plugin">
+                            <a id="mj-composer-upload-img" href="javascript:void(0)">
+                                <span class="fa fa-picture-o mj-text-success"></span>
+                            </a>
+                        </div>
+
+                        <div class="mj-editor-plugin">
+                            <a id="mj-composer-insert-video" href="javascript:void(0)">
+                                <span class="fa fa-video-camera mj-text-success"></span>
+                            </a>
+                        </div>
+
+                        <div class="mj-editor-plugin">
+                            <a id="mj-composer-insert-code" href="javascript:void(0)">
+                                <span class="fa fa-angle-left mj-text-success"></span>
+                                <span class="fa fa-angle-right mj-text-success"></span>
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="mj-btn-decor mj-btn-decor-success pull-right">
-                        <button type="button" class=" btn btn-primary mj-btn mj-btn-success">Save</button>
+                        <button type="button" id="mj-save-post" class=" btn btn-primary mj-btn mj-btn-success">Save</button>
                     </div>
                     
                     <!--

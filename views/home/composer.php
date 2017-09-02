@@ -9,9 +9,6 @@
     </div>
   
   <div class="media-body">
-    <!-- 
-        <h4 class="media-heading">Media heading</h4>
-    -->
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Write new post" aria-describedby="sizing-addon2">
         <span class="input-group-addon" id="sizing-addon2" data-toggle="modal" data-target="#composerModal">
