@@ -236,7 +236,7 @@ h3.mj-category small {
 }
 
 #composerModal .modal-content {
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 #composerModal .modal-content .modal-header {
@@ -246,12 +246,13 @@ h3.mj-category small {
 
 #composerModal .modal-content .modal-header .close {
     font-size: 25px;
-    color:#e0245e;
+    color: #000 !important;
+    opacity: .5;
 }
 
 #composerModal .modal-content .modal-body {
     background-color: #E8FAF2;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .mj-post-content textarea {

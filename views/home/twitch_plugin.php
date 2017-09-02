@@ -17,12 +17,12 @@ src="http://player.twitch.tv/?channel=yoda&muted=true"
 <div class="mj-block">
     <h3 class="title">
         Twitch
-        <small>· @litchi_2525</small>
+        <small>· @<?= $user ?></small>
     </h3>
 
     <center>
         <iframe
-          src="http://player.twitch.tv/?channel=litchi_2525&muted=true&autoplay=0" 
+          src="http://player.twitch.tv/?channel=<?= $user ?>&muted=true&autoplay=0" 
           height="200"
           width="290"
           border="0"

@@ -97,7 +97,7 @@ $this->title = 'My Journal';
         <?php
             echo \Yii::$app->view->renderFile(
                 "@app/views/home/twitch_plugin.php",
-                []
+                ["user" => "yoda"]
             ); 
         ?>
     </div>
