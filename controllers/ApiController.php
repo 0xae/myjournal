@@ -18,14 +18,17 @@ class ApiController extends \yii\web\Controller {
             $model->file = UploadedFile::getInstance($model, 'file');
 
             if ($model->file) {
-                $ret = Uploader::upload($model->file);
-                return json_encode([
-                    'name' => $ret
-                ]);
+                $obj = Uploader::upload($model->file, 'posts');
+                return json_encode($obj);
             }
         }
 
         throw new \yii\web\HttpException(400, 'Bad request');
+    }
+
+    public function actionRemove() {
+        $filename = $_GET['file'];
+        return Uploader::remove($filename, 'posts');
     }
 }
 

@@ -298,6 +298,32 @@ h3.mj-category small {
 .mj-text-success {
     color: #19CF86;
 }
+
+#mj-composer-editor .mj-post-img {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+}
+
+#mj-composer-editor .mj-post-img img:hover {
+    cursor: pointer;
+}
+
+#mj-composer-editor .mj-post-img img {
+    height: 300px;
+    width: 400px;
+}
+
+#mj-composer-editor .mj-post-img img:hover {
+    opacity: .7;
+}
+
+#mj-composer-editor .mj-post-img .fa-trash {
+    font-size: 34px;
+    color: #000;
+}
+
 </style>
 
 </head>

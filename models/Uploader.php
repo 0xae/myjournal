@@ -7,14 +7,26 @@ use Yii;
  * Login form
  */
 class Uploader {
-    public static function upload($file) {
+    public static function upload($file, $mod) {
         $uploads = Yii::getAlias("@webroot");
-        $n1 = "{$uploads}/media";
         $ext = end((explode(".", $file)));
-        $randomName = Yii::$app->security->generateRandomString().".{$ext}";
+        $id = Yii::$app->security->generateRandomString();
+        $randomName = $id . ".{$ext}";
+
+        $n1 = "{$uploads}/media/{$mod}";
         $filename = $n1.'/'.$randomName;
         $file->saveAs($filename, false);
-        return $filename;
+
+        return [
+            "path" => "media/{$mod}/" . $randomName,
+            "name" => $randomName,
+            "id" => $id
+        ];
+    }
+
+    public static function remove($file, $mod) {
+        $uploads = Yii::getAlias("@webroot");
+        return unlink("{$uploads}/media/{$mod}/$file");
     }
 }
 

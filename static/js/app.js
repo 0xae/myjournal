@@ -23,12 +23,28 @@
             contentType: false,
 
             success: function(data){
-                console.info("data: ", data);
+                var json = JSON.parse(data);                
+                var id = json.id;
+                var name = json.name;
+                $("#mj-composer-editor").append('<div class="mj-post-img" data-img="'+name+'" id="mj'+id+'"><center><img src="'+json.path+'" /></center></div><br/>');
             },
-            
+
             error: function (err) {
                 console.error("error: ", err);
             }
+        });
+    });
+    
+    $("body").on("click", "#mj-composer-editor .mj-post-img", function () {
+        if (!confirm("Are you sure?")) return;
+
+        var elementId = $(this).attr("id");
+        var image = $(this).attr("data-img")
+
+        $.get("index.php?r=api/remove&file="+image)
+        .then(function (d) {
+            console.info(d);
+            $("#"+elementId).remove();
         });
     });
 })();
