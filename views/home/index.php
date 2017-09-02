@@ -1,11 +1,11 @@
 <?php
-/* @var $this yii\web\View */
+$this->title = 'My Journal';
 ?>
 
 <div class="row">
     <div class="col-md-12">
         <div class="mj-header">
-            <img src="static/ck/2048x1365_739538.jpeg" />
+            <!-- <img src="static/ck/2048x1365_739538.jpeg" /> -->
         </div>
     </div>
 
@@ -14,11 +14,12 @@
               <div class="media-left media-middle">
                     <a href="#">
                       <img
-                          class="media-object mj-header-logo" 
-                          src="<?= \Yii::$app->user->identity->picture; ?>" 
+                          class="media-object mj-header-logo"
+                          src="<?= \Yii::$app->user->identity->picture; ?>"
                         />
                     </a>
               </div>
+
               <div class="media-body">
                     <h4 class="media-heading mj-media-heading inline mj-b-shadow">
                         <?= \Yii::$app->user->identity->name; ?>
@@ -68,13 +69,26 @@
                 </h3> 
             </div>
         </div>
+        
+
     </div>
 
     <div class="col-md-6" id="mj-timeline">
-        <?php require_once "timeline.php"; ?>
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/home/timeline.php",
+                []
+            ); 
+        ?>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3" id="mj-right-column">
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/home/twitch_plugin.php",
+                []
+            ); 
+        ?>
     </div>
 </div>
 

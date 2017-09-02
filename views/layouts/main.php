@@ -28,10 +28,8 @@ body {
     background-color: #337ab7;
     height: 400px;
     margin-bottom: -50px;
-    /*
     background: url(static/ck/2048x1365_739538.jpeg) no-repeat;
-    background-position: 50% 50%;
-    */
+    background-position: 16% 23%;
     max-height: 400px;
     overflow:hidden;
     overflow-y:scroll;
@@ -64,7 +62,7 @@ body {
     background-color: #fff;
     padding: 5px;
     margin-bottom: 10px;
-    margin-left: 12px;
+    margin-left: 10px;
 }
 
 .mj-block h3.title {
@@ -109,12 +107,49 @@ h3.mj-category small {
 }
 
 #mj-timeline {
-    padding: 10px;
+    padding: 0px;
     min-height: 650px;
     background-color: #fff;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;    
 }
+
+#mj-right-column {
+    margin-top: 65px;    
+    margin-left: -10px;
+}
+
+.mj-post {
+    /*
+    padding: 10px;
+    border-bottom: 1px 
+    */
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f5eeee;
+}
+
+.mj-post:hover {
+    background-color: rgba(0,0,0,.05);
+}
+
+.mj-post-media {
+    margin-bottom: 6px;
+}
+
+.mj-post-media .mj-img-main {
+    max-width: 400px;
+    border-radius: 2px;
+}
+
+.mj-post-author {
+    color: #2b55ad;
+    font-weight: bold;
+    font-size: 13px;
+}
+
 </style>
 </head>
 <body>
