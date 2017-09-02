@@ -282,8 +282,10 @@ h3.mj-category small {
     border-radius: 3px;
     color: #666;
     background-color: #fff;
-    padding: 5px;
-    min-height: 200px;
+    padding: 10px 10px;
+    min-height: 200px;    
+    max-height: 500px;    
+    overflow-y: scroll;
 }
 
 #mj-composer-editor:focus,

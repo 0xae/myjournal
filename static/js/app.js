@@ -36,7 +36,7 @@
     });
     
     $("body").on("click", "#mj-composer-editor .mj-post-img", function () {
-        if (!confirm("Are you sure?")) return;
+        if (!confirm("Delete this?")) return;
 
         var elementId = $(this).attr("id");
         var image = $(this).attr("data-img")
