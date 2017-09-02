@@ -2,7 +2,7 @@
 $this->title = 'My Journal';
 ?>
 
-<div class="row">
+<div class="row" style="margin-right: 0px;">
     <div class="col-md-12">
         <div class="mj-header">
             <!-- <img src="static/ck/2048x1365_739538.jpeg" /> -->
@@ -102,4 +102,13 @@ $this->title = 'My Journal';
         ?>
     </div>
 </div>
+
+
+<?php
+echo \Yii::$app->view->renderFile(
+    "@app/views/home/composer_modal.php",
+    []
+);
+?>
+
 

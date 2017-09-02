@@ -21,6 +21,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 <style>
+
 body {
     background-color: #e6ecf0;
 }
@@ -155,22 +156,114 @@ h3.mj-category small {
     border-top-right-radius: 4px;
 }
 
-.mj-composer .input-group input{
+.mj-composer .input-group input {
     border-right: 0px;
     border-color: #A3EBCE;
     color: #19CF86;
     box-shadow: 0px 0px 0px #fff;
 }
 
-.mj-composer .input-group span{
+.mj-composer .input-group span {
     background-color: #fff;
     border-color: #A3EBCE;    
     color: #19CF86;
 }
 
+.mj-composer .input-group span:hover {
+    cursor: pointer;
+}
+
 .mj-composer .input-group span span{
     font-size: 14px;
 }
+
+.mj-btn {
+    border-color: transparent;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 16px;
+}
+
+.mj-btn:focus {
+    border-color: transparent;
+}
+
+.mj-btn:hover {
+    border-color: transparent;
+}
+
+.mj-btn-success {
+    background-color: #19CF86;
+}
+
+.mj-btn-danger {
+    background-color: #e0245e;
+}
+
+.mj-btn-success:hover {
+    background-color: #19CF86;
+}
+
+.mj-btn-decor {
+    display: table;
+    border-radius: 18px;
+    padding: 2px;
+    width: 74px;
+    margin-left: 5px;
+}
+
+.mj-btn-decor-success {
+    border: 2px solid #19CF86;
+}
+
+.mj-btn-decor-danger {
+    border: 2px solid #e0245e;
+}
+
+.mj-btn-success:focus,
+.mj-btn-success:active {
+    background-color: #19CF86 !important;
+    border-color: transparent !important;
+}
+
+.mj-btn-primary {
+}
+
+#composerModal .modal-dialog {
+    width: 700px;
+}
+
+#composerModal .modal-content {
+    border-radius: 4px;
+}
+
+#composerModal .modal-content .modal-header {
+    text-align: center;
+    padding: 10px;
+}
+
+#composerModal .modal-content .modal-header .close {
+    font-size: 25px;
+    color:#e0245e;
+}
+
+#composerModal .modal-content .modal-body {
+    background-color: #E8FAF2;
+    border-radius: 4px;
+}
+
+.mj-post-content textarea {
+    border-color: #A3EBCE;
+    color: #666;
+}
+
+.mj-post-details {
+    margin-top: 10px;
+    min-height: 40px;
+}
+
 </style>
 
 </head>
