@@ -107,7 +107,7 @@ $this->title = 'My Journal';
 <?php
 echo \Yii::$app->view->renderFile(
     "@app/views/home/composer_modal.php",
-    []
+    ["model" => $uploadModel]
 );
 ?>
 

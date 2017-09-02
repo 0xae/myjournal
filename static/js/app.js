@@ -1,6 +1,6 @@
-(function (){
+(function () {
     $("#mj-composer-upload-img").on("click", function () {
-        console.info("upload img");
+        $("#form_upload_file").click();
     });
 
     $("#mj-save-post").on("click", function () {
@@ -8,25 +8,28 @@
         console.info(htmlBuffer);
     });
 
-    function uploadFile(){
+    $("#form_upload_file").change(function(){
+        var form = $("#mj-composer-form _csrf");
         var fd = new FormData();
-        var e = document.getElementById("Model_logo");
-        fd.append("Model[logo]", $(e)[0].files[0]);
+        fd.append("ImgUpload[file]", $("#form_upload_file")[0].files[0]);
+        fd.append("X-CSRF-Token", $("#mj-composer-form input[name=_csrf]").val());
+        fd.append("X-Requested-With", "XMLHttpRequest");
 
         $.ajax({
-            url: 'index.php?r=api/uploadimg',
-            type: 'POST',
-            cache: false,
+            type: "POST",
+            url: "index.php?r=api/upload",
             data: fd,
             processData: false,
             contentType: false,
-            success: function (data) { 
-                console.info("yeeee");
-            },
 
-            error: function (e) {
-                console.error("yeeee");
+            success: function(data){
+                console.info("data: ", data);
+            },
+            
+            error: function (err) {
+                console.error("error: ", err);
             }
         });
-    }
+    });
 })();
+

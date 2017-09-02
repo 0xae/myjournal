@@ -298,7 +298,6 @@ h3.mj-category small {
 .mj-text-success {
     color: #19CF86;
 }
-
 </style>
 
 </head>
