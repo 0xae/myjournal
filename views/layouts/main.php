@@ -120,15 +120,12 @@ h3.mj-category small {
 }
 
 .mj-post {
-    /*
-    padding: 10px;
-    border-bottom: 1px 
-    */
     cursor: pointer;
     padding-left: 10px;
     padding-top: 10px;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #f5eeee;
+    margin-top: 0px;    
 }
 
 .mj-post:hover {
@@ -150,7 +147,23 @@ h3.mj-category small {
     font-size: 13px;
 }
 
+.mj-composer {
+    padding: 10px;
+    border-bottom: 1px solid #f5eeee;
+    background-color: #E8FAF2;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.mj-composer .input-group input{
+    border-right: 0px;
+}
+
+.mj-composer .input-group span{
+    background-color: #fff;
+}
 </style>
+
 </head>
 <body>
 <?php $this->beginBody() ?>

@@ -1,0 +1,61 @@
+diff --git a/views/home/post.php b/views/home/post.php
+index 66bf4e0..27ba2ec 100644
+--- a/views/home/post.php
++++ b/views/home/post.php
+@@ -28,28 +28,17 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
+         <ul class="nav nav-pills">
+             <li role="presentation" class="">
+                 <a href="#" style="font-size:12px;padding: 0px;padding-right:3px;">
+-                    <img style="display:inline-block;padding:0px;" src="static/img/like.png" width="13" height="13" class="o">
++                    <span class="glyphicon glyphicon-heart-empty"></span>
+                     0
+                 </a>
+             </li>
+ 
+-            <!--
+-            <li role="presentation" class="">
+-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
+-                · <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">like</span>
+-                </a>
+-            </li>
+-            -->
+-
+-            <li role="presentation" class="">
++            <li role="presentation" class="" style="margin-left: 12px;">
+                 <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
+-                 · <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">comment</span>
+-                </a>
+-            </li>
+-
+-            <li role="presentation" class="color: #777">
+-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
+-                 ·  <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">full story</span>
++                        <span class="glyphicon glyphicon-comment"></span>
++                 <span style="padding:1px;padding-left:3px;padding-right:3px;">
++                    0
++                 </span>
+                 </a>
+             </li>
+         </ul>
+diff --git a/views/layouts/main.php b/views/layouts/main.php
+index 9efd62a..326ee87 100755
+--- a/views/layouts/main.php
++++ b/views/layouts/main.php
+@@ -120,15 +120,12 @@ h3.mj-category small {
+ }
+ 
+ .mj-post {
+-    /*
+-    padding: 10px;
+-    border-bottom: 1px 
+-    */
+     cursor: pointer;
+     padding-left: 10px;
+     padding-top: 10px;
+-    padding-bottom: 14px;
++    padding-bottom: 10px;
+     border-bottom: 1px solid #f5eeee;
++    margin-top: 0px;    
+ }
+ 
+ .mj-post:hover {

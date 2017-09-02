@@ -27,29 +27,22 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
 
         <ul class="nav nav-pills">
             <li role="presentation" class="">
-                <a href="#" style="font-size:12px;padding: 0px;padding-right:3px;">
-                    <img style="display:inline-block;padding:0px;" src="static/img/like.png" width="13" height="13" class="o">
-                    0
+                <a href="#" style="font-size:13px;padding: 0px;padding-right:3px;color:#e0245e">
+                    <strong>
+                    <span class="fa fa-heart-o" style="padding-right:5px;"></span> 0
+                    </strong>                    
                 </a>
             </li>
 
-            <!--
-            <li role="presentation" class="">
-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
-                · <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">like</span>
-                </a>
-            </li>
-            -->
-
-            <li role="presentation" class="">
-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
-                 · <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">comment</span>
+            <li role="presentation" class="" style="margin-left: 12px;">
+                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:13px;padding: 0px;">
+                    <span class="fa fa-mail-reply" style="padding-right:5px;"></span> 0
                 </a>
             </li>
 
-            <li role="presentation" class="color: #777">
+            <li role="presentation" class="" style="margin-left: 12px;">
                 <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:12px;padding: 0px;padding-right:3px;">
-                 ·  <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">full story</span>
+                 <span style="background-color: #eee;padding:1px;padding-left:3px;padding-right:3px;border-radius:3px;">full story</span>
                 </a>
             </li>
         </ul>
