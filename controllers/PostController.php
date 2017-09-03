@@ -1,5 +1,4 @@
 <?php
-
 namespace app\controllers;
 
 use Yii;
@@ -114,3 +113,4 @@ class PostController extends Controller {
         }
     }
 }
+

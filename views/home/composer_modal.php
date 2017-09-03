@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\bootstrap\Dropdown;
 ?>
 
 <!-- Modal -->
@@ -16,22 +17,37 @@ use yii\widgets\ActiveForm;
             </div>
 
             <div class="modal-body">
+              <div class="dropdown">
+                      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Label <b class="caret"></b></a>
+                        <?php                
+                        echo Dropdown::widget([
+                              'items' => [
+                                  ['label' => 'DropdownA', 'url' => '/'],
+                                  ['label' => 'DropdownB', 'url' => '#'],
+                              ],
+                        ]);
+                    ?>                
+                </div>
+
                 <div class="mj-post-content">
                     <div class="mj-composer-content" id="mj-composer-editor" contenteditable="true">Write...</div>
                 </div>
-                
+
                 <div class="mj-post-details">
                     <div class="pull-left" style="font-size: 18px;padding: 10px;">
                         <div class="mj-editor-plugin">                            
-                            <?php $form = ActiveForm::begin([
-                                "options" => ["enctype" => "multipart/form-data", 
-                                              "class" => "hidden",
-                                              "id" => "mj-composer-form"], 
-                                "action" => "index.php?r=api/upload",
-                                                                                        
-                             ]); ?>
-                                <?= $form->field($uploadModel, 'file')->fileInput(["id" => "form_upload_file"]) ?>
-                            <?php ActiveForm::end(); ?>
+                            <?php 
+                                $form = ActiveForm::begin([
+                                    "options" => ["enctype" => "multipart/form-data", 
+                                                  "class" => "hidden",
+                                                  "id" => "mj-composer-form"], 
+                                    "action" => "index.php?r=api/upload",                                                                                        
+                                ]); 
+                            
+                                echo $form->field($uploadModel, 'file')->fileInput(["id" => "form_upload_file"]);
+
+                                ActiveForm::end(); 
+                            ?>
 
                             <a id="mj-composer-upload-img" href="javascript:void(0)">
                                 <span class="fa fa-picture-o mj-text-success"></span>
@@ -72,6 +88,16 @@ use yii\widgets\ActiveForm;
                         <?= $postForm->field($postModel, 'content')->textarea(['rows' => 6]) ?>
                         <?= $postForm->field($postModel, 'author')->textInput() ?>
                         <?= $postForm->field($postModel, 'category')->textInput() ?>
+
+                        <?php
+                            /*
+                            echo $postForm->field($postModel, 'category')->widget(Select2::classname(), [
+                                'data' => $categoryData,
+                                'options' => ['multiple' => false]
+                            ]);
+                            */
+                        ?>
+
 
                     <?php ActiveForm::end(); ?>
 

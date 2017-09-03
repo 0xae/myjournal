@@ -109,7 +109,8 @@ echo \Yii::$app->view->renderFile(
     "@app/views/home/composer_modal.php",
     [
         "uploadModel" => $uploadModel,
-        "postModel" => $postModel
+        "postModel" => $postModel,
+        "categoryData" => $categoryData
     ]
 );
 ?>

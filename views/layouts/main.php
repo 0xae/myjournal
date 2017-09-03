@@ -315,6 +315,8 @@ h3.mj-category small {
 #mj-composer-editor .mj-post-img img {
     height: 300px;
     width: 400px;
+    /* border: 1px solid #A3EBCE; */
+    border-radius: 3px;
 }
 
 #mj-composer-editor .mj-post-img img:hover {
