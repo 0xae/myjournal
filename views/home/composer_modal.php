@@ -45,7 +45,7 @@ use yii\widgets\ActiveForm;
                         </div>
 
                         <div class="mj-editor-plugin">
-                            <a id="mj-composer-insert-code" href="javascript:void(0)">
+                            <a id="mj-composer-insert-code" href="javascript:void(0)" style="font-size: 20px;">
                                 <span class="fa fa-angle-left mj-text-success"></span>
                                 <span class="fa fa-angle-right mj-text-success"></span>
                             </a>

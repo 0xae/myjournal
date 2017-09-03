@@ -58,7 +58,7 @@ class PostController extends Controller {
      * @return mixed
      */
     public function actionCreate() {
-        $model = new Post();
+        $model = new Post;
         $model->creation_date = date('Y-m-d H:i:s');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

@@ -5,8 +5,8 @@ use app\models\Post;
 
 class HomeController extends \yii\web\Controller {
     public function actionIndex() {
-        $uploadModel = new ImgUpload;
         $postModel = new Post;
+        $uploadModel = new ImgUpload;
 
         return $this->render('index', [
             'uploadModel' => $uploadModel,

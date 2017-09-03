@@ -34,12 +34,12 @@
             }
         });
     });
-    
-    $("body").on("click", "#mj-composer-editor .mj-post-img", function () {
+
+    $("body").on("click", "#mj-composer-editor .mj-post-img img", function () {
         if (!confirm("Delete this?")) return;
 
-        var elementId = $(this).attr("id");
-        var image = $(this).attr("data-img")
+        var elementId = $(this).parent().parent().attr("id");
+        var image = $(this).parent().parent().attr("data-img");
 
         $.get("index.php?r=api/remove&file="+image)
         .then(function (d) {
