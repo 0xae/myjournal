@@ -68,25 +68,12 @@ use yii\bootstrap\Dropdown;
                     -->
 
                     <?php $postForm = ActiveForm::begin([
-                        "options" => ["enctype" => "multipart/form-data", 
-                                      "class" => "hidden",
-                                      "id" => "mj-composer-form"], 
-                        "action" => "index.php?r=api/upload",
+                        "options" => ["class" => "hidden","id" => "mj-composer-form"], 
+                        "action" => "index.php?r=post/create",
                     ]); ?>
 
-                        <?= $postForm->field($postModel, 'content')->textarea(['rows' => 6]) ?>
-                        <?= $postForm->field($postModel, 'author')->textInput() ?>
-                        <?= $postForm->field($postModel, 'category')->textInput() ?>
-
-                        <?php
-                            /*
-                            echo $postForm->field($postModel, 'category')->widget(Select2::classname(), [
-                                'data' => $categoryData,
-                                'options' => ['multiple' => false]
-                            ]);
-                            */
-                        ?>
-
+                        <?= $postForm->field($postModel, 'content')->textarea(['rows' => 6, 'id'=>'form_post_content']) ?>
+                        <?= $postForm->field($postModel, 'category')->textInput(['id' => 'form_post_category']) ?>
 
                     <?php ActiveForm::end(); ?>
 

@@ -60,7 +60,7 @@ $this->title = 'My Journal';
             <div class="mj-content">
                 <?php foreach ($categoryData as $cat): ?>
                     <p class="mj-category">
-                        <a href="javascript:void(0)" class="mj-link">
+                        <a href="index.php?r=home/index&id=<?= $cat->id ?>#begin" class="mj-link">
                             <?= $cat->name ?>
                         </a>
                         <br/>
@@ -76,6 +76,8 @@ $this->title = 'My Journal';
     </div>
 
     <div class="col-md-6" id="mj-timeline">
+        <a href="#begin" id="begin"></a>
+
         <div class="mj-timeline-composer">
             <?php
                 echo \Yii::$app->view->renderFile(
@@ -86,10 +88,11 @@ $this->title = 'My Journal';
         </div>
 
         <div class="mj-timeline-posts">
+
             <?php
                 echo \Yii::$app->view->renderFile(
                     "@app/views/home/timeline.php",
-                    []
+                    ['postData' => $postData]
                 ); 
             ?>
         </div>

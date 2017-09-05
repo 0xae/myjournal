@@ -4,10 +4,27 @@ use Yii;
 use app\models\ImgUpload;
 use app\models\Uploader;
 use app\models\Category;
+use app\models\Post;
 use yii\web\UploadedFile;
-
+use yii\filters\AccessControl;
 
 class ApiController extends \yii\web\Controller {
+    public function behaviors() {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['upload', 'remove', 'post',
+                                      'category'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionIndex() {
         return $this->render('index');
     }
@@ -32,9 +49,6 @@ class ApiController extends \yii\web\Controller {
         return Uploader::remove($filename, 'posts');
     }
 
-    public function actionPost() {
-    }
-
     public function actionCategory() {
         $name = strtolower(trim($_GET['name']));
         $ret = Category::find()
@@ -56,6 +70,22 @@ class ApiController extends \yii\web\Controller {
             'id' => $ret->id,
             'isNew' => $isNew
         ]);
+    }
+
+    public function actionPost() {
+        $model = new Post;
+        $model->creation_date = date('Y-m-d H:i:s');
+        $model->author = Yii::$app->user->identity->id;
+        $model->content = $_POST['content'];
+        $model->category = $_POST['category'];
+
+        if ($model->save()) {
+            return json_encode([
+                'id' => $model->id
+            ]);
+        } else {
+            return json_encode($model->getErrors());
+        }
     }
 }
 

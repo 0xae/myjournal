@@ -1,5 +1,5 @@
 <?php
-namespace app\controllers;
+eamespace app\controllers;
 
 use Yii;
 use app\models\Post;
@@ -59,13 +59,14 @@ class PostController extends Controller {
     public function actionCreate() {
         $model = new Post;
         $model->creation_date = date('Y-m-d H:i:s');
+        $model->author = Yii::$app->user->identity->id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
+            return json_encode([
+                'id' => $model->id
             ]);
+        } else {
+            return json_encode($model->getErrors());
         }
     }
 
