@@ -334,9 +334,20 @@ h3.mj-category small {
     border-radius: 0px;
     border: 0px;
 }
+
 .mj-category-option {
     width: 100%;
 }
+
+#mj-category-menu {
+    max-height: 200px;
+    min-height: 40px;
+    min-width: 182px;
+    max-width: 182px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 </style>
 
 </head>

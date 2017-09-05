@@ -93,6 +93,7 @@
                 $("#mj_category_id").text(id);
                 $("#mj_category_name").text(name);
                 $("#mj_category_label").text(name);
+                $("#cat_not_found").hide();
 
                 LogCategory();
                 
