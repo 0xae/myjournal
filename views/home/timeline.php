@@ -19,7 +19,7 @@
             </a>
         </h4>
 
-        <div style="margin-bottom:5px;font-size:13px;">
+        <div style="margin-bottom:5px;font-size:13px;width:500px;">
             <?= $post->content ?>
         </div>
         
