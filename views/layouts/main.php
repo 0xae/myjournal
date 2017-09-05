@@ -328,6 +328,15 @@ h3.mj-category small {
     color: #000;
 }
 
+#mj_category_filter {
+    font-size: 12px;
+    margin-top: -5px;
+    border-radius: 0px;
+    border: 0px;
+}
+.mj-category-option {
+    width: 100%;
+}
 </style>
 
 </head>

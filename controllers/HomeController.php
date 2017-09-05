@@ -9,7 +9,7 @@ class HomeController extends \yii\web\Controller {
     public function actionIndex() {
         $postModel = new Post;
         $uploadModel = new ImgUpload;
-        $categories = Category::find()->asArray()->all();
+        $categories = Category::find()->all();
 
         return $this->render('index', [
             'uploadModel' => $uploadModel,
@@ -25,3 +25,4 @@ class HomeController extends \yii\web\Controller {
         ]);
     }
 }
+

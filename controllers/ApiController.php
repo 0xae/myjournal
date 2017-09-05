@@ -3,6 +3,7 @@ namespace app\controllers;
 use Yii;
 use app\models\ImgUpload;
 use app\models\Uploader;
+use app\models\Category;
 use yii\web\UploadedFile;
 
 
@@ -32,6 +33,29 @@ class ApiController extends \yii\web\Controller {
     }
 
     public function actionPost() {
+    }
+
+    public function actionCategory() {
+        $name = strtolower(trim($_GET['name']));
+        $ret = Category::find()
+            ->where(['name' => $name])
+            ->one();
+
+        $isNew = false;
+
+        if (!$ret) {
+            $c = new Category;
+            $c->name = $name;
+            $c->save();
+            $ret = $c;
+            $isNew = true;
+        }
+
+        echo json_encode([
+            'name' => $ret->name,
+            'id' => $ret->id,
+            'isNew' => $isNew
+        ]);
     }
 }
 

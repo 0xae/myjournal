@@ -17,18 +17,7 @@ use yii\bootstrap\Dropdown;
             </div>
 
             <div class="modal-body">
-              <div class="dropdown">
-                      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Label <b class="caret"></b></a>
-                        <?php                
-                        echo Dropdown::widget([
-                              'items' => [
-                                  ['label' => 'DropdownA', 'url' => '/'],
-                                  ['label' => 'DropdownB', 'url' => '#'],
-                              ],
-                        ]);
-                    ?>                
-                </div>
-
+                <?php require_once 'category_selector.php'; ?>
                 <div class="mj-post-content">
                     <div class="mj-composer-content" id="mj-composer-editor" contenteditable="true">Write...</div>
                 </div>
