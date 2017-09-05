@@ -98,14 +98,19 @@ body {
 .mj-settings-icon{
 }
 
-h3.mj-category {
+.mj-category {
     font-size: 13px;
     margin-bottom: 3px;
     margin-top: 10px;
 }
 
-h3.mj-category small {
+.mj-category small {
     font-size: 13px;
+    color: #777;
+}
+
+.mj-link {
+    color: #19CF86;
 }
 
 #mj-timeline {

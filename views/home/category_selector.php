@@ -18,7 +18,8 @@
 
     <?php foreach ($categoryData as $cat): ?>
         <li class="mj-category-index" data-category-name="<?= $cat->name ?>" id="mj-category-<?= $cat->id ?>">
-            <a style="border-top: 1px solid #ccc" href="#" 
+            <a style="border-top: 1px solid #ccc" 
+                href="javascript:void(0)" 
                 class="mj-category-option"
                 data-category-id="<?= $cat->id ?>"
                 data-category-name="<?= $cat->name ?>">

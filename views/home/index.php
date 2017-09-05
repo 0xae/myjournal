@@ -58,15 +58,17 @@ $this->title = 'My Journal';
             </h3>
             
             <div class="mj-content">
-                <h3 class="mj-category"> 
-                    Food<br/>
-                    <small>10 posts</small>
-                 </h3> 
-
-                <h3 class="mj-category"> 
-                    #Trender tech<br/>
-                    <small>2 posts</small>
-                </h3> 
+                <?php foreach ($categoryData as $cat): ?>
+                    <p class="mj-category">
+                        <a href="javascript:void(0)" class="mj-link">
+                            <?= $cat->name ?>
+                        </a>
+                        <br/>
+                        <small class="mj-category-posts-count">
+                            <?= count($cat->getPosts()) ?> posts
+                        </small>
+                    </p>
+                <?php endforeach; ?>
             </div>
         </div>
         
