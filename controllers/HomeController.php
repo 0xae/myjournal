@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use Yii;
 
 class HomeController extends \yii\web\Controller {
+    /*
     public function behaviors() {
         return [
             'access' => [
@@ -22,8 +23,13 @@ class HomeController extends \yii\web\Controller {
             ],
         ];
     }
+    */
 
     public function actionIndex($id=false) {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/index']);
+        } 
+
         $u = Yii::$app->user->identity;
 
         $postModel = new Post;

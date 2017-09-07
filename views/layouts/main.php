@@ -45,6 +45,7 @@ body {
     background-color: transparent;
     margin-left: 10px;
     margin-right: 15px;
+    color: #19CF86;
 }
 
 .mj-header {
