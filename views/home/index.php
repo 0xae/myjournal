@@ -76,8 +76,6 @@ $this->title = 'My Journal';
     </div>
 
     <div class="col-md-6" id="mj-timeline">
-        <a href="#begin" id="begin"></a>
-
         <!--
         <div class="mj-timeline-composer">
             <?php

@@ -4,9 +4,25 @@ use app\models\ImgUpload;
 use app\models\Post;
 use app\models\Category;
 use yii\helpers\ArrayHelper;
+use yii\filters\AccessControl;
 use Yii;
 
 class HomeController extends \yii\web\Controller {
+    public function behaviors() {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
     public function actionIndex($id=false) {
         $u = Yii::$app->user->identity;
 

@@ -26,6 +26,27 @@ body {
     background-color: #e6ecf0;
 }
 
+.mj-logout-form {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.mj-logout-form img {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+
+.mj-logout-link {
+    font-size: 11px;
+    border:0px;
+    padding:0px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
 .mj-header {
     background-color: #337ab7;
     height: 400px;
@@ -33,8 +54,10 @@ body {
     background: url(static/ck/2048x1365_739538.jpeg) no-repeat;
     background-position: 16% 23%;
     max-height: 400px;
+    /*
     overflow:hidden;
     overflow-y:scroll;
+    */
 }
 
 .mj-b-shadow {
@@ -361,6 +384,7 @@ body {
 
 <div class="">
     <?php
+        /*
         NavBar::begin([
             'brandLabel' => '<span class="fa fa-newspaper-o"></span> My Journal',
             'brandUrl' => Yii::$app->homeUrl,
@@ -368,18 +392,18 @@ body {
                 'class' => 'navbar-default navbar-fixed-top',
             ],
         ]);
-        
+
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => '<span><strong>yeye</strong></span>', 'url' => ['/site/index']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                 ) : (
                     '<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
-                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        'Logout',
                         ['class' => 'btn btn-link logout']
                     )
                     . Html::endForm()
@@ -387,7 +411,10 @@ body {
                 )
             ],
         ]);
+
         NavBar::end();
+        */
+        require_once 'navbar.php';
     ?>
 </div>
 

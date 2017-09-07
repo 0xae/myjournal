@@ -7,6 +7,7 @@ use app\models\Category;
 use app\models\Post;
 use yii\web\UploadedFile;
 use yii\filters\AccessControl;
+use \yii\web\HttpException;
 
 class ApiController extends \yii\web\Controller {
     public function behaviors() {
@@ -41,7 +42,7 @@ class ApiController extends \yii\web\Controller {
             }
         }
 
-        throw new \yii\web\HttpException(400, 'Bad request');
+        throw new HttpException(400, 'Bad request');
     }
 
     public function actionRemove() {

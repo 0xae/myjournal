@@ -17,10 +17,10 @@
             </a>
         </h4>
 
-        <div style="margin-bottom:5px;font-size:13px;width:500px;">
+        <div style="margin-bottom:5px;font-size:13px;width:500px;" class="mj-post-content">
             <?= $post->content ?>
         </div>
-        
+
         <!--
         <div class="mj-post-media">
             <img class="mj-img-main" src="static/thumbs/d3a992083469da83e0a189a080cdadc5a3e3d2bc.jpg" />
