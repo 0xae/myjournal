@@ -10,26 +10,28 @@
         <img src="static/img/steemit-196x196.png" style="display:inline;width:15px;height:15px;"> 
         -->
         <h4 class="mj-post-author" style="display: inline;">
-            steemerhrn
+            <?= $post->getAuthor()->name; ?>
             <span style="color: #999;">· </span>
             <a href="#" title="2017-08-28T11:55:03Z" style="font-size:11px;padding: 0px;padding-right:3px;color:#777;text-decoration:none;font-weight:normal;">
-                2017-08-28T11:55:03Z            
-           </a>
+               <?= $post->creation_date; ?>   
+            </a>
         </h4>
 
-        <p style="margin-bottom:5px;font-size:13px;">
-Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </p>
+        <div style="margin-bottom:5px;font-size:13px;width:500px;">
+            <?= $post->content ?>
+        </div>
         
+        <!--
         <div class="mj-post-media">
             <img class="mj-img-main" src="static/thumbs/d3a992083469da83e0a189a080cdadc5a3e3d2bc.jpg" />
         </div>
+        -->
 
         <ul class="nav nav-pills">
             <li role="presentation" class="" title="2 love">
                 <a href="#" style="font-size:10px;padding: 0px;padding-right:3px;color:#e0245e">
                     <strong>
-                    <span class="fa fa-heart-o" style="padding-right:5px;"></span> 2
+                    <span class="fa fa-heart-o" style="padding-right:5px;"></span> 0
                     </strong>                    
                 </a>
             </li>
@@ -45,7 +47,7 @@ Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante so
             <li role="presentation" class="" style="margin-left: 24px;" title="views">
                 <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:10px;padding: 0px;">
                     <strong>
-                    <span class="glyphicon glyphicon-signal" style="padding-right:5px;"></span> 5
+                    <span class="glyphicon glyphicon-signal" style="padding-right:5px;"></span> 0
                     </strong>
                 </a>
             </li>
