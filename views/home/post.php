@@ -31,7 +31,7 @@
             <li role="presentation" class="" title="2 love">
                 <a href="#" style="font-size:10px;padding: 0px;padding-right:3px;color:#e0245e">
                     <strong>
-                    <span class="fa fa-heart-o" style="padding-right:5px;"></span> 0
+                        <span class="fa fa-heart-o" style="padding-right:5px;"></span> 0
                     </strong>                    
                 </a>
             </li>
@@ -52,13 +52,25 @@
                 </a>
             </li>
             
+            <li role="presentation" title="category <?= $post->getCategory()->name; ?>" style="margin-left: 24px;">
+                <a target="__blank" href="javascript:void(0)" style="color:#777;font-size:13px;padding: 0px;margin-top: -1px;padding-left: 3px;padding-right: 3px;">                       
+                    <strong>
+                        <span class="fa fa-tag" style="font-size: 11px;"></span>
+                        <?= $post->getCategory()->name ?>
+                    </strong>
+                </a>
+            </li>
+
             <!--
-            <li role="presentation" class="" style="margin-left: 24px;">
-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#777;font-size:13px;padding: 0px;">
-                    <strong>more..</strong>
+            <li role="presentation" class="" title="category <?= $post->getCategory()->name; ?>">
+                <a href="#" style="font-size:10px;padding: 0px;padding-right:3px;">
+                    <strong>
+                    <?= $post->getCategory()->name ?>
+                    </strong>
                 </a>
             </li>
             -->
+
         </ul>
       </div>
 </div>

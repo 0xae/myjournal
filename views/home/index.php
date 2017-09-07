@@ -78,6 +78,7 @@ $this->title = 'My Journal';
     <div class="col-md-6" id="mj-timeline">
         <a href="#begin" id="begin"></a>
 
+        <!--
         <div class="mj-timeline-composer">
             <?php
                 echo \Yii::$app->view->renderFile(
@@ -86,9 +87,9 @@ $this->title = 'My Journal';
                 ); 
             ?>
         </div>
+        -->
 
         <div class="mj-timeline-posts">
-
             <?php
                 echo \Yii::$app->view->renderFile(
                     "@app/views/home/timeline.php",
