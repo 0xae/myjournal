@@ -146,8 +146,19 @@ body {
 }
 
 #mj-right-column {
-    margin-top: 65px;    
+    /*margin-top: 65px;*/
     margin-left: -10px;
+}
+
+.mj-compose-btn {
+    margin-bottom: 20px;
+}
+
+.mj-compose-btn button {
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #19CF86;
 }
 
 .mj-post {
