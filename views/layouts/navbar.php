@@ -60,6 +60,14 @@ use app\assets\AppAsset;
                     </a>
                 </li>
             <?php else: ?>
+                <li>                    
+                    <div class="mj-btn-decor mj-compose mj-btn-decor-success pull-right">
+                        <button type="button" class="btn btn-primary mj-btn mj-btn-success" data-toggle="modal" data-target="#composerModal">
+                            Compose
+                        </button>
+                    </div>
+                </li>
+
                 <li>
                     <?php
                     echo Html::beginForm(['/site/logout'], 'post', ["class"=>"mj-logout-form"])

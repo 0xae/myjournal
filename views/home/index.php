@@ -76,13 +76,6 @@ $this->title = 'My Journal';
     </div>
 
     <div class="col-md-3" id="mj-right-column">
-        <div class="mj-compose-btn" style="">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#composerModal">
-                <span class="fa fa-pencil"></span>
-                <strong>Compose</strong>
-            </button>
-        </div>
-
         <?php
         echo \Yii::$app->view->renderFile(
             "@app/views/home/composer_modal.php",

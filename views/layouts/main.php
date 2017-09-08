@@ -400,6 +400,16 @@ body {
     max-height: 500px;
 }
 
+.mj-compose {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.mj-compose button {
+    font-size: 11px;
+    padding: 3px 11px;
+}
+
 </style>
 
 </head>
