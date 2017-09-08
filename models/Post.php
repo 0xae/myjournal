@@ -73,4 +73,12 @@ class Post extends \yii\db\ActiveRecord {
     public function getTags() {
         return [];
     }
+
+    public static function findById($id) {
+        if (($model = Post::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
 }

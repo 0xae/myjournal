@@ -6,9 +6,6 @@
     </div>
 
       <div class="media-body">
-        <!--
-        <img src="static/img/steemit-196x196.png" style="display:inline;width:15px;height:15px;"> 
-        -->
         <h4 class="mj-post-author" style="display: inline;">
             <?= $post->getAuthor()->name; ?>
             <span style="color: #999;">· </span>
@@ -37,7 +34,7 @@
             </li>
 
             <li role="presentation" class="" style="margin-left: 24px;" title="0 comments">
-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:10px;padding: 0px;">
+                <a href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:10px;padding: 0px;">
                     <strong>
                     <span class="fa fa-commenting" style="padding-right:5px;"></span> 0
                     </strong>
@@ -45,7 +42,7 @@
             </li>
 
             <li role="presentation" class="" style="margin-left: 24px;" title="views">
-                <a target="__blank" href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:10px;padding: 0px;">
+                <a href="https://steemit.com/news/@steemerhrn/4pt19c-news-todays-most-popular-posts-here-promotion" style="color:#1da1f2;font-size:10px;padding: 0px;">
                     <strong>
                     <span class="glyphicon glyphicon-signal" style="padding-right:5px;"></span> 0
                     </strong>
@@ -53,9 +50,9 @@
             </li>
             
             <li role="presentation" title="category <?= $post->getCategory()->name; ?>" style="margin-left: 24px;">
-                <a target="__blank" href="javascript:void(0)" style="color:#777;font-size:13px;padding: 0px;margin-top: -1px;padding-left: 3px;padding-right: 3px;">                       
+                <a href="index.php?r=home/index&id=<?= $post->getCategory()->id ?>" style="color:#777;font-size:11px;padding: 0px;margin-top: -1px;padding-left: 3px;padding-right: 3px;">                       
                     <strong>
-                        <span class="fa fa-tag" style="font-size: 11px;"></span>
+                        <span class="fa fa-tag" style="font-size: 9px;"></span>
                         <?= $post->getCategory()->name ?>
                     </strong>
                 </a>

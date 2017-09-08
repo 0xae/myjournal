@@ -1,4 +1,16 @@
 (function (){
+    function destroyComposer() {
+        $("#mj-composer-editor").text("Write...");
+        $("#composerModal").modal('hide');
+    }
+    
+    function getPost(id) {
+        return $.ajax({
+            type: "GET",
+            url: "index.php?r=api/post_view&id="+id
+        });
+    }
+
     $("#mj-composer-upload-img").on("click", function () {
         $("#form_upload_file").click();
     });
@@ -21,7 +33,7 @@
                 var json = JSON.parse(data);                
                 var id = json.id;
                 var name = json.name;
-                $("#mj-composer-editor").append('<div class="mj-post-img" data-img="'+name+'" id="mj'+id+'"><center><img src="'+json.path+'" /></center></div><br/>');
+                $("#mj-composer-editor").append('<div class="mj-post-img" data-img="'+name+'" id="mj'+id+'"><img style="max-width:500px;max-height:500px;" src="'+json.path+'" /></div><br/>');
             },
 
             error: function (err) {
@@ -57,7 +69,16 @@
             },
 
             success: function(data){
-                console.info(data);
+                destroyComposer();
+                var json = JSON.parse(data);
+                
+                setTimeout(function (){
+                    getPost(json.id)
+                    .then(function (data) {
+                        console.info("stream-data: %o", data);
+                        $("#mj-timeline-ref").append(data);
+                    });
+                }, 1500);
             },
 
             error: function (err) {

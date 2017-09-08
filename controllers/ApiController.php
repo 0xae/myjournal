@@ -17,7 +17,7 @@ class ApiController extends \yii\web\Controller {
                 'rules' => [
                     [
                         'actions' => ['upload', 'remove', 'post',
-                                      'category'],
+                                      'category', 'post_view'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -87,6 +87,16 @@ class ApiController extends \yii\web\Controller {
         } else {
             return json_encode($model->getErrors());
         }
+    }
+
+    public function actionPost_view($id) {
+        $model = Post::findById($id);
+        return $this->renderPartial('@app/views/plugins/post.php', [
+            'post' => $model
+        ]);
+    }
+
+    public function actionCategory_view() {
     }
 }
 

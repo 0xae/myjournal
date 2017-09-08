@@ -41,6 +41,7 @@ class HomeController extends \yii\web\Controller {
         }
         $posts = Post::find()
                     ->where($query)
+                    ->orderBy('creation_date desc')
                     ->all();
 
         return $this->render('index', [

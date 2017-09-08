@@ -37,42 +37,19 @@ $this->title = 'My Journal';
               </div>
         </div>
 
-        <div class="mj-block">
-            <h3 class="title">
-                Welcome
-            </h3>
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/plugins/welcome_card.php",
+                []
+            ); 
+        ?>
 
-            <div class="mj-content">
-                <h3 class="title">
-                    <small>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                    </small>                
-                </h3>
-            </div>
-        </div>
-
-        <div class="mj-block">
-            <h3 class="title">
-                Categories 
-                <small>· settings</small>
-            </h3>
-            
-            <div class="mj-content">
-                <?php foreach ($categoryData as $cat): ?>
-                    <p class="mj-category">
-                        <a href="index.php?r=home/index&id=<?= $cat->id ?>#begin" class="mj-link">
-                            <?= $cat->name ?>
-                        </a>
-                        <br/>
-                        <small class="mj-category-posts-count">
-                            <?= count($cat->getPosts()) ?> posts
-                        </small>
-                    </p>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        
-
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/plugins/category_listing.php",
+                ["categoryData" => $categoryData]
+            ); 
+        ?>
     </div>
 
     <div class="col-md-6" id="mj-timeline">
@@ -88,6 +65,7 @@ $this->title = 'My Journal';
         -->
 
         <div class="mj-timeline-posts">
+            <span id="mj-timeline-ref"></span>
             <?php
                 echo \Yii::$app->view->renderFile(
                     "@app/views/home/timeline.php",
@@ -118,13 +96,10 @@ $this->title = 'My Journal';
 
         <?php
             echo \Yii::$app->view->renderFile(
-                "@app/views/home/twitch_plugin.php",
+                "@app/views/plugins/twitch_plugin.php",
                 ["user" => "yoda"]
             );
         ?>
     </div>
 </div>
-
-
-
 

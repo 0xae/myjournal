@@ -388,6 +388,18 @@ body {
     overflow-x: hidden;
 }
 
+.mj-post .mj-post-img img {
+    max-height: 300px;
+    max-width: 400px;
+    /* border: 1px solid #A3EBCE; */
+    border-radius: 3px;
+}
+
+.mj-post-img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
 </style>
 
 </head>
