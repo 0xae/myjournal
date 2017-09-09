@@ -14,7 +14,7 @@
             </a>
         </h4>
 
-        <div style="margin-bottom:5px;font-size:13px;width:500px;" class="mj-post-content">
+        <div style="margin-bottom:5px;font-size:13px;width:90%;" class="mj-post-content">
             <?= $post->content ?>
         </div>
 

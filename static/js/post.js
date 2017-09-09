@@ -77,8 +77,9 @@
                     .then(function (data) {
                         console.info("stream-data: %o", data);
                         $("#mj-timeline-ref").append(data);
+                        localStorage.removeItem("_postBackup");
                     });
-                }, 1500);
+                }, 700);
             },
 
             error: function (err) {
