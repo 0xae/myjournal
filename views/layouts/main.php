@@ -393,6 +393,7 @@ body {
     max-width: 400px;
     /* border: 1px solid #A3EBCE; */
     border-radius: 3px;
+    margin-top: 10px;
 }
 
 .mj-post-img {
@@ -452,7 +453,9 @@ body {
     ?>
 </div>
 
-<?= $content ?>
+<div style="margin-top: 50px;">
+    <?= $content ?>
+</div>
 
 <!--
 <footer class="footer">

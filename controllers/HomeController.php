@@ -1,11 +1,12 @@
 <?php
 namespace app\controllers;
+use Yii;
+use yii\helpers\ArrayHelper;
+use yii\filters\AccessControl;
+use yii\web\NotFoundHttpException;
 use app\models\ImgUpload;
 use app\models\Post;
 use app\models\Category;
-use yii\helpers\ArrayHelper;
-use yii\filters\AccessControl;
-use Yii;
 
 class HomeController extends \yii\web\Controller {
     /*

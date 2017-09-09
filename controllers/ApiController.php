@@ -7,7 +7,8 @@ use app\models\Category;
 use app\models\Post;
 use yii\web\UploadedFile;
 use yii\filters\AccessControl;
-use \yii\web\HttpException;
+use yii\web\HttpException;
+use yii\web\NotFoundHttpException;
 
 class ApiController extends \yii\web\Controller {
     public function behaviors() {
