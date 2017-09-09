@@ -10,7 +10,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 ?>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
 
     <div class="navbar-header">

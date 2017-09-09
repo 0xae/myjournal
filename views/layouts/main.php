@@ -136,6 +136,13 @@ body {
     color: #19CF86;
 }
 
+.mj-link:hover,
+.mj-link:active,
+.mj-link:focus {
+    color: #19CF86;
+    /*text-decoration: none;*/
+}
+
 #mj-timeline {
     padding: 0px;
     min-height: 650px;
