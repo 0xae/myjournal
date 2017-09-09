@@ -34,15 +34,20 @@ class HomeController extends \yii\web\Controller {
 
         $postModel = new Post;
         $uploadModel = new ImgUpload;
-        $categories = Category::find()->all();
         $query = ['author' => $u->id];
         if ($id) {
-            $query['category'] = $id;
+            $query['category'] = (int)$id;
         }
+
         $posts = Post::find()
                     ->where($query)
                     ->orderBy('creation_date desc')
                     ->all();
+
+        $categories = [];
+        foreach ($posts as $p) {
+            $categories[] = $p->getCategory();
+        }
 
         return $this->render('index', [
             'uploadModel' => $uploadModel,

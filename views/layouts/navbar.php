@@ -64,6 +64,7 @@ use app\assets\AppAsset;
                     <div class="mj-btn-decor mj-compose mj-btn-decor-success pull-right">
                         <button type="button" class="btn btn-primary mj-btn mj-btn-success" data-toggle="modal" data-target="#composerModal">
                             Compose
+                            <span class="fa fa-pencil"></span>
                         </button>
                     </div>
                 </li>
