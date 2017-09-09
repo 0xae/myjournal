@@ -32,12 +32,20 @@ class HomeController extends \yii\web\Controller {
         } 
 
         $user = Yii::$app->user->identity;
-
         $postModel = new Post;
         $uploadModel = new ImgUpload;
+        $categories = Category::getCategoriesOf($user->id);
         $query = ['author' => $user->id];
+        $mainCat = null;
+
         if ($id) {
             $query['category'] = (int)$id;
+            foreach ($categories as $c) {
+                if ($c['id'] == $id) {
+                    $mainCat = $c;
+                    break;
+                }
+            }
         }
 
         $posts = Post::find()
@@ -45,13 +53,13 @@ class HomeController extends \yii\web\Controller {
                     ->orderBy('creation_date desc')
                     ->all();
 
-        $categories = Category::getCategoriesOf($user->id);
 
         return $this->render('index', [
             'uploadModel' => $uploadModel,
             'postModel' => $postModel,
             'postData' => $posts,
-            'categoryData' => $categories
+            'categoryData' => $categories,
+            'categoryFilter' => $mainCat
         ]);
     }
 

@@ -441,6 +441,21 @@ body {
 
 }
 
+#mj-timeline-ref {
+    margin-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f5eeee;
+}
+
+#mj-timeline-ref h3 {
+    font-weight:bold;
+    font-size:16px;
+    margin:4px;
+    margin-left: 20px;
+    margin-top: 10px;    
+    color: #ccc;
+}
+
 </style>
 
 </head>

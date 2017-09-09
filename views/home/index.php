@@ -56,7 +56,10 @@ $this->title = 'My Journal';
         <?php
             echo \Yii::$app->view->renderFile(
                 "@app/views/home/timeline.php",
-                ['postData' => $postData]
+                [
+                    'postData' => $postData,
+                    'categoryFilter' => $categoryFilter
+                ]
             ); 
         ?>
     </div>
