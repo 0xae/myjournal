@@ -52,13 +52,15 @@ body {
     background-color: #337ab7;
     height: 400px;
     margin-bottom: -50px;
-    background: url(static/ck/2048x1365_739538.jpeg) no-repeat;
+/*    background: url(static/images/88_berlin.jpg) no-repeat;
     background-position: 16% 23%;
+*/
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.8) 100%);
     max-height: 400px;
     /*
+    */
     overflow:hidden;
     overflow-y:scroll;
-    */
 }
 
 .mj-b-shadow {

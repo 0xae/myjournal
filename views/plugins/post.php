@@ -1,7 +1,12 @@
 <div class="media mj-post" title="">
     <div class="media-left">
         <a href="#">
-            <img class="media-object" src="static/thumbs/U5dtDf43rbDTZNgQkELFyjqZxyF9RGU_256x512.jpg" alt="Foto of steemerhrn" width="55" height="45" />
+            <img class="media-object" 
+                 src="static/images/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg" 
+                 alt="Foto of <?= $post->getAuthor()->name; ?>" 
+                 width="55" 
+                 height="45" 
+            />
         </a>
     </div>
 
