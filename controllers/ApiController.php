@@ -75,15 +75,31 @@ class ApiController extends \yii\web\Controller {
     }
 
     public function actionPost() {
-        $model = new Post;
-        $model->creation_date = date('Y-m-d H:i:s');
-        $model->author = Yii::$app->user->identity->id;
-        $model->content = $_POST['content'];
-        $model->category = $_POST['category'];
+        $user = Yii::$app->user->identity->id;
+        $id = $_POST['id'];
+        $model = null;
+
+        if ($id) {
+            $model = Post::find()
+                ->where(['id' => $id, 'author' => $user->id])
+                ->one();
+            if (!$model) {
+                throw new HttpException(400, "Bad post update request");
+            }
+
+            $model->content = $_POST['content'];
+        } else {
+            $model = new Post;
+            $model->creation_date = date('Y-m-d H:i:s');
+            $model->author = $user->id;
+            $model->content = $_POST['content'];
+            $model->category = $_POST['category'];
+        }
 
         if ($model->save()) {
             return json_encode([
-                'id' => $model->id
+                'id' => $model->id,
+                'action' => $id ? 'updated' : 'created'
             ]);
         } else {
             return json_encode($model->getErrors());

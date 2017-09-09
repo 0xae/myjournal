@@ -53,26 +53,12 @@ $this->title = 'My Journal';
     </div>
 
     <div class="col-md-6" id="mj-timeline">
-        <!--
-        <div class="mj-timeline-composer">
-            <?php
-                echo \Yii::$app->view->renderFile(
-                    "@app/views/home/composer.php",
-                    []
-                ); 
-            ?>
-        </div>
-        -->
-
-        <div class="mj-timeline-posts">
-            <span id="mj-timeline-ref"></span>
-            <?php
-                echo \Yii::$app->view->renderFile(
-                    "@app/views/home/timeline.php",
-                    ['postData' => $postData]
-                ); 
-            ?>
-        </div>
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/home/timeline.php",
+                ['postData' => $postData]
+            ); 
+        ?>
     </div>
 
     <div class="col-md-3" id="mj-right-column">

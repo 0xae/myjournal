@@ -4,6 +4,8 @@
      data-post-id="<?= $post->id ?>"
      data-post-author="<?= $post->getAuthor()->id ?>"
      >
+   
+   <!--
     <div class="media-left">
         <a href="#">
             <img class="media-object mj-post-avatar" 
@@ -14,6 +16,7 @@
             />
         </a>
     </div>
+    -->
 
     <div class="media-body">
         <h4 class="mj-post-author" style="display: inline;">

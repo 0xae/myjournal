@@ -10,6 +10,34 @@
             url: "index.php?r=api/post_view&id="+id
         });
     }
+    
+    function savePost(json) {
+        return new Promise(function (resolve, reject) {
+            var content = json.content;
+            var category = json.category;
+            if (!content.trim() || !category) {
+                return reject();  
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "index.php?r=api/post",
+                data: {
+                    id: json.id,
+                    content: content,
+                    category: category
+                },
+
+                success: function(data){
+                    resolve(data);
+                },
+
+                error: function (err) {
+                    reject(err);
+                }
+            });
+        });
+    }
 
     $("#mj-composer-upload-img").on("click", function () {
         $("#form_upload_file").click();
@@ -58,33 +86,38 @@
     $("#mj-save-post").on("click", function () {
         var htmlBuffer = $("#mj-composer-editor").html().trim();
         var category = CategoryModule().getCurrentCategory().id;
-        if (!htmlBuffer || htmlBuffer == 'Write...') return;  
+        if (!htmlBuffer || htmlBuffer == 'Write...') return; 
 
-        $.ajax({
-            type: "POST",
-            url: "index.php?r=api/post",
-            data: {
-                content: htmlBuffer,
-                category: category
-            },
+        var newPost = {
+            content: htmlBuffer,
+            category: category
+        };
+        
+        savePost(newPost)
+        .then(function (data){
+            destroyComposer();
+            var json = JSON.parse(data);
+            
+            setTimeout(function (){
+                getPost(json.id)
+                .then(function (data) {
+                    $("#mj-timeline-ref").append(data);
+                    localStorage.removeItem("_postBackup");
+                });
+            }, 700);
+        }, function (error) {
+            console.error("error: ", err);
+        });
+    });
 
-            success: function(data){
-                destroyComposer();
-                var json = JSON.parse(data);
-                
-                setTimeout(function (){
-                    getPost(json.id)
-                    .then(function (data) {
-                        console.info("stream-data: %o", data);
-                        $("#mj-timeline-ref").append(data);
-                        localStorage.removeItem("_postBackup");
-                    });
-                }, 700);
-            },
+    $("body").on("click", ".mj-post", function () {
+        var postId = $(this).attr("data-post-id");
 
-            error: function (err) {
-                console.error("error: ", err);
-            }
+        getPost(postId)
+        .then(function (data) {
+            $("#mj-post-view").html(data);
+            $("#postViewModal").modal();
         });
     });
 })();
+

@@ -29,8 +29,8 @@
     <?php endforeach; ?>
     <li style="padding: 0px;margin-top: 35px;" id="cat_not_found">
         <a href="javascript:void(0)" style="font-size: 11px" id="mj_create_category">
-            category not found.<br/>
-            create it?
+            few results found.<br/>
+            create <span id="mj_new_category_pl"></span> ?
         </a>
     </li>
   </ul>

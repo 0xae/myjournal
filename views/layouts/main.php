@@ -60,8 +60,6 @@ body {
     overflow:hidden;
 }
 
-.mj-b-shadow {
-}
 
 .mj-user-badge {
     padding: 10px;
@@ -151,6 +149,10 @@ body {
     border-top-right-radius: 4px;    
 }
 
+#mj_new_category_pl {
+    color: #19CF86;
+}
+
 #mj-right-column {
     /*margin-top: 65px;*/
     margin-left: -10px;
@@ -168,15 +170,25 @@ body {
 }
 
 .mj-post {
-    cursor: pointer;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #f5eeee;
     margin-top: 0px;    
 }
 
-.mj-post:hover {
+.mj-timeline-posts .mj-post {
+    cursor: pointer;
+}
+
+.mj-timeline-posts .mj-post {
+    border-bottom: 1px solid #f5eeee;
+}
+
+.mj-post .mj-post-avatar {
+    border-radius: 2px;
+}
+
+.mj-timeline-posts .mj-post:hover {
     background-color: rgba(0,0,0,.05);
 }
 
@@ -420,6 +432,13 @@ body {
 .mj-compose button {
     font-size: 11px;
     padding: 3px 11px;
+}
+
+#mj-post-view {
+    padding: 0px;
+    max-width: 600px;
+    min-height: 400px;
+
 }
 
 </style>

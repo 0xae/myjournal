@@ -14,17 +14,19 @@
 
     $("#mj_category_filter").on("keyup", function () {
         var query = $(this).val();
-        var found = false;
+        var count = 0;
+
         $(".mj-category-index").each(function (el) {
             if ($(this).attr("data-category-name").indexOf(query) == -1) {
                 $(this).hide();
             } else {
-                found = true;
+                count += 1;
                 $(this).show();
             }
         });
         
-        if (!found) {
+        if (count <= 1) {
+            $("#mj_new_category_pl").text(query);
             $("#cat_not_found").show();
         } else {
             $("#cat_not_found").hide();
