@@ -52,4 +52,16 @@ class Category extends \yii\db\ActiveRecord {
         return $this->hasMany(Post::className(), ['category' => 'id'])
                     ->all();
     }
+
+    public function getCategoriesOf($userId) {
+        $sql = '
+            SELECT C.id,C.name,COUNT(P.ID) as total_post FROM MJ_CATEGORY C
+            JOIN MJ_POST P ON P.CATEGORY = C.ID AND P.AUTHOR = :userId
+            GROUP BY C.ID
+        ';
+
+        return Yii::$app->db->createCommand($sql)
+                ->bindValue(':userId', $userId)
+                ->queryAll();
+    }
 }

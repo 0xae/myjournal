@@ -218,13 +218,26 @@ body {
     font-size: 14px;
 }
 
+.mj-btn-decor {
+    display: table;
+    border-radius: 18px;
+    padding: 2px;
+    /*width: 74px;*/
+    margin-left: 5px;
+}
+
 .mj-btn {
     border-color: transparent;
     border-radius: 15px;
     font-weight: bold;
-    color: #fff;
+    color: #464242;
+    /*
     font-size: 13px;
     padding: 6px 16px;
+    */
+    font-size: 11px;
+    padding: 3px 11px;
+
 }
 
 .mj-btn:focus {
@@ -245,14 +258,6 @@ body {
 
 .mj-btn-success:hover {
     background-color: #19CF86;
-}
-
-.mj-btn-decor {
-    display: table;
-    border-radius: 18px;
-    padding: 2px;
-    width: 74px;
-    margin-left: 5px;
 }
 
 .mj-btn-decor-success {
@@ -418,39 +423,7 @@ body {
 <?php $this->beginBody() ?>
 
 <div class="">
-    <?php
-        /*
-        NavBar::begin([
-            'brandLabel' => '<span class="fa fa-newspaper-o"></span> My Journal',
-            'brandUrl' => Yii::$app->homeUrl,
-            'options' => [
-                'class' => 'navbar-default navbar-fixed-top',
-            ],
-        ]);
-
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right'],
-            'items' => [
-                ['label' => '<span><strong>yeye</strong></span>', 'url' => ['/site/index']],
-                Yii::$app->user->isGuest ? (
-                    ['label' => 'Login', 'url' => ['/site/login']]
-                ) : (
-                    '<li>'
-                    . Html::beginForm(['/site/logout'], 'post')
-                    . Html::submitButton(
-                        'Logout',
-                        ['class' => 'btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    . '</li>'
-                )
-            ],
-        ]);
-
-        NavBar::end();
-        */
-        require_once 'navbar.php';
-    ?>
+    <?php require_once 'navbar.php'; ?>
 </div>
 
 <div style="margin-top: 50px;">

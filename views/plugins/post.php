@@ -1,11 +1,11 @@
 <div class="media mj-post" title="">
     <div class="media-left">
         <a href="#">
-            <img class="media-object" src="static/thumbs/U5dtDf43rbDTZNgQkELFyjqZxyF9RGU_256x512.jpg" alt="Foto of steemerhrn" width="70" height="50" />
+            <img class="media-object" src="static/thumbs/U5dtDf43rbDTZNgQkELFyjqZxyF9RGU_256x512.jpg" alt="Foto of steemerhrn" width="55" height="45" />
         </a>
     </div>
 
-      <div class="media-body">
+    <div class="media-body">
         <h4 class="mj-post-author" style="display: inline;">
             <?= $post->getAuthor()->name; ?>
             <span style="color: #999;">· </span>
@@ -69,5 +69,5 @@
             -->
 
         </ul>
-      </div>
+    </div>
 </div>

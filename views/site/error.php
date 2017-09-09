@@ -22,5 +22,5 @@ $this->title = $name;
             <i>Thank you.</i>
         </p>
     </div>
-
 </div>
+
