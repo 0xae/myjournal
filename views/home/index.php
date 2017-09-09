@@ -5,7 +5,7 @@ $this->title = 'My Journal';
 <div class="row" style="margin-right: 0px;">
     <div class="col-md-12">
         <div class="mj-header">
-            <img src="static/images/2048x1365_739538.jpeg" style="object-fit: cover" />
+            <img src="static/images/2048x1365_739538.jpeg" style="object-fit: cover;object-position: 0px -340px;" />
         </div>
     </div>
 

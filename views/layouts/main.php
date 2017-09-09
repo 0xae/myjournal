@@ -57,10 +57,7 @@ body {
 */
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.8) 100%);
     max-height: 400px;
-    /*
-    */
     overflow:hidden;
-    overflow-y:scroll;
 }
 
 .mj-b-shadow {
