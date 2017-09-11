@@ -1,13 +1,5 @@
 <div class="mj-timeline-posts">
-    <div id="mj-timeline-ref">
-        <h3>
-            <?php if ($categoryFilter): ?>
-                Category <?= $categoryFilter['name'] ?>
-            <?php else: ?>
-                Home
-            <?php endif; ?>                    
-        </h3>
-    </div>
+    <div id="mj-timeline-ref"></div>
 
     <?php 
     foreach ($postData as $post) {

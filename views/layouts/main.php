@@ -376,8 +376,8 @@ body {
 }
 
 #mj-composer-editor .mj-post-img img {
-    height: 300px;
-    width: 400px;
+    max-height: 300px;
+    max-width: 400px;
     /* border: 1px solid #A3EBCE; */
     border-radius: 3px;
 }
@@ -442,9 +442,9 @@ body {
 }
 
 #mj-timeline-ref {
-    margin-top: 6px;
+    /*margin-top: 6px;
     padding-bottom: 6px;
-    border-bottom: 1px solid #f5eeee;
+    border-bottom: 1px solid #f5eeee;*/
 }
 
 #mj-timeline-ref h3 {

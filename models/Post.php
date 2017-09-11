@@ -32,7 +32,7 @@ class Post extends \yii\db\ActiveRecord {
         return [
             [['content', 'category'], 'required'],
             [['content'], 'string'],
-            [['author', 'category'], 'integer'],
+            [['author', 'parent', 'category'], 'integer'],
             [['creation_date', 'location', 'lang'], 'safe'],
             [['author'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author' => 'id']],
             [['category'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category' => 'id']],
@@ -66,6 +66,11 @@ class Post extends \yii\db\ActiveRecord {
     public function getCategory() {
         return $this->hasOne(Category::className(), ['id' => 'category'])
                     ->one();
+    }
+
+    public function getChildren() {
+        return $this->hasMany(Post::className(), ['parent' => 'id'])
+                    ->all();
     }
 
     /**

@@ -35,7 +35,10 @@ class HomeController extends \yii\web\Controller {
         $postModel = new Post;
         $uploadModel = new ImgUpload;
         $categories = Category::getCategoriesOf($user->id);
-        $query = ['author' => $user->id];
+        $query = [
+            'author' => $user->id,
+            'parent' => NULL
+        ];
         $mainCat = null;
 
         if ($id) {

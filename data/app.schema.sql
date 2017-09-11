@@ -1,4 +1,4 @@
-drop database if exists myjournal ;
+drop database if exists myjournal;
 create database myjournal;
 use myjournal;
 
@@ -24,7 +24,7 @@ create table mj_user (
     type varchar(50),
     is_active boolean not null default true,
     
-    settings_id BIGINT(20) NOT NULL,
+    settings_id BIGINT(20),
     creation_date datetime NOT NULL DEFAULT now(),
     
     FOREIGN KEY(settings_id) REFERENCES mj_user_settings(ID),
@@ -53,8 +53,10 @@ create table mj_post (
     creation_date datetime NOT NULL DEFAULT now(),
     location varchar(250),
     lang varchar(250),
+    parent BIGINT(20) DEFAULT NULL,
 
     FOREIGN KEY(author) REFERENCES mj_user(ID),
+    FOREIGN KEY(parent) REFERENCES mj_post(ID),
     FOREIGN KEY(category) REFERENCES mj_category(ID)
 );
 
@@ -67,3 +69,4 @@ create table mj_post_tag (
     FOREIGN KEY(tag_id) REFERENCES mj_tag(ID)
 );
 
+insert into mj_category(name) values ('general');

@@ -24,7 +24,7 @@
                 $(this).show();
             }
         });
-        
+
         if (count <= 1) {
             $("#mj_new_category_pl").text(query);
             $("#cat_not_found").show();
@@ -32,12 +32,12 @@
             $("#cat_not_found").hide();
         }
     });
-    
+
     $("#mj_create_category").on("click", function () {
         var catName = encodeURIComponent($("#mj_category_filter").val());
         $.ajax({
             type: "GET",
-            url: "index.php?r=api/category&name=" + catName,
+            url: "index.php?r=api/category_create&name=" + catName,
             success: function (data){
                 var json = JSON.parse(data);                
                 var id = json.id;

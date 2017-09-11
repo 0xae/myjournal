@@ -18,7 +18,8 @@ class ApiController extends \yii\web\Controller {
                 'rules' => [
                     [
                         'actions' => ['upload', 'remove', 'post',
-                                      'category', 'post_view'],
+                                       'category_create', 'post_view',
+                                       'post_stream', 'post_create'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,10 +52,10 @@ class ApiController extends \yii\web\Controller {
         return Uploader::remove($filename, 'posts');
     }
 
-    public function actionCategory() {
-        $name = strtolower(trim($_GET['name']));
+    public function actionCategory_create() {
+        $name = trim($_GET['name']);
         $ret = Category::find()
-            ->where(['name' => $name])
+            ->where(['name' => strtolower($name)])
             ->one();
 
         $isNew = false;
@@ -74,9 +75,9 @@ class ApiController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionPost() {
-        $user = Yii::$app->user->identity->id;
-        $id = $_POST['id'];
+    public function actionPost_create() {
+        $user = Yii::$app->user->identity;
+        $id = @$_POST['id'];
         $model = null;
 
         if ($id) {
@@ -94,6 +95,8 @@ class ApiController extends \yii\web\Controller {
             $model->author = $user->id;
             $model->content = $_POST['content'];
             $model->category = $_POST['category'];
+            $parent = @$_POST['parent'];
+            $model->parent = ($parent) ? $parent : null;
         }
 
         if ($model->save()) {
@@ -102,14 +105,20 @@ class ApiController extends \yii\web\Controller {
                 'action' => $id ? 'updated' : 'created'
             ]);
         } else {
-            return json_encode($model->getErrors());
+            $resp = json_encode($model->getErrors());
+            throw new HttpException(400, $resp);
         }
     }
 
     public function actionPost_view($id) {
-        $model = Post::findById($id);
+        return $this->renderPartial('@app/views/plugins/post_view.php', [
+            'post' => Post::findById($id)
+        ]);
+    }
+
+    public function actionPost_stream($id) {
         return $this->renderPartial('@app/views/plugins/post.php', [
-            'post' => $model
+            'post' => Post::findById($id)
         ]);
     }
 
