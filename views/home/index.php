@@ -66,14 +66,21 @@ $this->title = 'My Journal';
 
     <div class="col-md-3" id="mj-right-column">
         <?php
-        echo \Yii::$app->view->renderFile(
-            "@app/views/home/composer_modal.php",
-            [
-                "uploadModel" => $uploadModel,
-                "postModel" => $postModel,
-                "categoryData" => $categoryData
-            ]
-        );
+            echo \Yii::$app->view->renderFile(
+                "@app/views/plugins/media_listing.php",
+                []
+            );
+        ?>
+
+        <?php
+            echo \Yii::$app->view->renderFile(
+                "@app/views/home/composer_modal.php",
+                [
+                    "uploadModel" => $uploadModel,
+                    "postModel" => $postModel,
+                    "categoryData" => $categoryData
+                ]
+            );
         ?>
 
         <?php

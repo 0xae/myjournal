@@ -3,6 +3,19 @@
         $("#mj-composer-editor").text("Write...");
         $("#composerModal").modal('hide');
     }
+    
+    function buildMedia() {
+        var images = $(".mj-post .mj-post-content .mj-post-img img");
+    
+        images.each(function (){
+            var src = $(this).attr("src");
+            var tpl =  '<div style="display: inline;margin: 2px;margin-bottom:12px;">'+
+                '<img src="'+src+'" width="90" height="90" style="margin: 2px;" />'+
+            '</div>';
+            
+            $("#mj-media-listing").append(tpl);
+        });
+    }
 
     function getPost(id) {
         return $.ajax({
@@ -10,14 +23,14 @@
             url: "index.php?r=api/post_view&id="+id
         });
     }
-    
+
     function streamPost(id) {
         return $.ajax({
             type: "GET",
             url: "index.php?r=api/post_stream&id="+id
         });
     }
-    
+
     function savePost(json) {
         return new Promise(function (resolve, reject) {
             var content = json.content;
@@ -126,4 +139,6 @@
             $("#postViewModal").modal();
         });
     });
+    
+    buildMedia();
 })();
