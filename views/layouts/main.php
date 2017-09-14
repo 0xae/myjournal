@@ -456,6 +456,30 @@ body {
     color: #ccc;
 }
 
+.mj-calendar {
+    text-align: center;
+    border: 1px solid #f5eeee;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.mj-calendar .mj-calendar-header {
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #e0245e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;    
+}
+
+.mj-calendar h1 {
+    margin:0px;
+    font-size: 29px;
+}
+
 </style>
 
 </head>

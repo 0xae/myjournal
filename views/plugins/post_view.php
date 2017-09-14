@@ -1,3 +1,7 @@
+<?php
+$date = new DateTime($post->creation_date);
+?>
+
 <div class="media mj-post" 
      title="Post #<?= $post->id ?>" 
      id="mj_post_<?= $post->id ?>"
@@ -6,14 +10,22 @@
      >
    
     <div class="media-left">
+        <!--
         <a href="#">
             <img class="media-object mj-post-avatar" 
-                 src="static/images/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg" 
+                 src="<?= $post->getAuthor()->picture; ?>" 
                  alt="Foto of <?= $post->getAuthor()->name; ?>" 
                  width="55" 
                  height="45" 
             />
         </a>
+        -->
+        <div class="mj-calendar">
+            <div class="mj-calendar-header">
+            <?= $date->format("M"); ?>
+            </div>
+            <h1><?= $date->format("d"); ?></h1>
+        </div>        
     </div>
 
     <div class="media-body">

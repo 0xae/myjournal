@@ -29,11 +29,6 @@ $this->title = 'My Journal';
                         </small>
                     </h4>
                     <a href="javascript:void(0)" class="mj-b-shadow mj-seen">· seen 15mn ago</a>
-                    <!--
-                    <a href="javascript:void(0)">
-                        <span class="mj-settings-icon glyphicon glyphicon-cog"></span>
-                    </a>
-                    -->
               </div>
         </div>
 

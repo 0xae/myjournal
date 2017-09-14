@@ -5,17 +5,7 @@ use yii\web\NotFoundHttpException;
 
 
 /**
- * This is the model class for table "mj_post".
- *
- * @property integer $id
- * @property string $content
- * @property integer $author
- * @property integer $category
- * @property string $creation_date
- *
- * @property MjUser $author0
- * @property MjCategory $category0
- * @property MjPostTag[] $mjPostTags
+ * Post model
  */
 class Post extends \yii\db\ActiveRecord {
     /**
