@@ -3,17 +3,21 @@
         $("#mj-composer-editor").text("Write...");
         $("#composerModal").modal('hide');
     }
-    
+
     function buildMedia() {
         var images = $(".mj-post .mj-post-content .mj-post-img img");
+        var MAX=6;
     
         images.each(function (){
+            if (MAX <= 0) return false;
             var src = $(this).attr("src");
-            var tpl =  '<div style="display: inline;margin: 2px;margin-bottom:12px;">'+
-                '<img src="'+src+'" width="90" height="90" style="margin: 2px;" />'+
+            var postId = $(this).parent().parent().attr("data-post-id");
+            var tpl =  '<div class="mj-media" data-post-id="'+postId+'" style="display: inline;margin: 2px;margin-bottom:12px;">'+
+                '<a href="javascript:void(0)"><img src="'+src+'" width="90" height="90" style="margin: 2px;" /></a>'+
             '</div>';
-            
+
             $("#mj-media-listing").append(tpl);
+            MAX--;
         });
     }
 
@@ -30,6 +34,14 @@
             url: "index.php?r=api/post_stream&id="+id
         });
     }
+    
+    function openPost(postId) {        
+        getPost(postId)
+        .then(function (data) {
+            $("#mj-post-view").html(data);
+            $("#postViewModal").modal();
+        });
+    }    
 
     function savePost(json) {
         return new Promise(function (resolve, reject) {
@@ -132,12 +144,12 @@
 
     $("body").on("click", ".mj-post", function () {
         var postId = $(this).attr("data-post-id");
+        openPost(postId);
+    });
 
-        getPost(postId)
-        .then(function (data) {
-            $("#mj-post-view").html(data);
-            $("#postViewModal").modal();
-        });
+    $("body").on("click", ".mj-media", function () {
+        var postId = $(this).attr("data-post-id");
+        openPost(postId);
     });
     
     buildMedia();

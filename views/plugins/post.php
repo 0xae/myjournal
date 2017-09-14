@@ -31,12 +31,6 @@
             <?= $post->content ?>
         </div>
 
-        <!--
-        <div class="mj-post-media">
-            <img class="mj-img-main" src="static/thumbs/d3a992083469da83e0a189a080cdadc5a3e3d2bc.jpg" />
-        </div>
-        -->
-
         <ul class="nav nav-pills">
             <li role="presentation" class="" title="2 love">
                 <a href="#" style="font-size:10px;padding: 0px;padding-right:3px;color:#e0245e">

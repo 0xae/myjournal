@@ -23,18 +23,5 @@ src="http://player.twitch.tv/?channel=yoda&muted=true"
     </h3>
     
     <div id="mj-media-listing">
-        <!--
-        <div style="display: inline">
-            <img src="static/images/dcd0d42dly8fdukojevm7j20ro0rpacg.jpg" width="90" height="90" />
-        </div>
-
-        <div style="display: inline">
-            <img src="static/images/dcd0d42dly8fdukojevm7j20ro0rpacg.jpg" width="90" height="90" />
-        </div>
-
-        <div style="display: inline">
-            <img src="static/images/dcd0d42dly8fdukojevm7j20ro0rpacg.jpg" width="90" height="90" />
-        </div>
-        -->
     </div>
 </div>
