@@ -95,4 +95,3 @@
     window.CategoryModule = module;
     return module;
 })();
-

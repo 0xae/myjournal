@@ -16,5 +16,3 @@ echo \Yii::$app->view->renderFile(
     "@app/views/plugins/post_modal.php"
 );
 ?>
-
-
