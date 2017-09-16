@@ -15,7 +15,7 @@
             MAX--;
         });
     }
-    
+
     $("body").on("click", "#mj-composer-editor .mj-post-img img", function () {
         if (!confirm("Delete this?")) return;
 
@@ -38,6 +38,6 @@
         var postId = $(this).attr("data-post-id");
         openPost(postId);
     });
-    
+
     buildMedia();
 })();

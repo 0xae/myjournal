@@ -23,7 +23,7 @@ class Post extends \yii\db\ActiveRecord {
             [['content', 'category'], 'required'],
             [['content'], 'string'],
             [['author', 'parent', 'category'], 'integer'],
-            [['creation_date', 'location', 'lang'], 'safe'],
+            [['creation_date', 'parent', 'location', 'lang'], 'safe'],
             [['author'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author' => 'id']],
             [['category'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category' => 'id']],
         ];

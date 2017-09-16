@@ -96,7 +96,10 @@ class ApiController extends \yii\web\Controller {
             $model->content = $_POST['content'];
             $model->category = $_POST['category'];
             $parent = @$_POST['parent'];
-            $model->parent = ($parent) ? $parent : null;
+            if ($parent){
+                $model->parent = $parent;
+                $model->category = Post::findById($parent)->category;
+            }
         }
 
         if ($model->save()) {

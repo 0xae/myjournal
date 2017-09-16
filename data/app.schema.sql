@@ -49,7 +49,7 @@ create table mj_post (
     id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     content text NOT NULL,
     author BIGINT(20) NOT NULL,
-    category BIGINT(20) NOT NULL,
+    category BIGINT(20),
     creation_date datetime NOT NULL DEFAULT now(),
     location varchar(250),
     lang varchar(250),

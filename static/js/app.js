@@ -36,7 +36,7 @@ function savePost(json) {
     });
 }
 
-function getPost(id) {
+function readPost(id) {
     return $.ajax({
         type: "GET",
         url: "index.php?r=api/post_view&id="+id
@@ -51,11 +51,11 @@ function streamPost(id) {
 }
 
 function openPost(postId) {   
-    getPost(postId)
+    readPost(postId)
     .then(function (data) {
         $("#mj-post-view").html(data);
         $("#postViewModal").modal();
-        $("#form-post-parent-post_reply_12").val(postId); 
+        $("#form-post-parent-post_reply_12").val(postId);
     });
 }
 

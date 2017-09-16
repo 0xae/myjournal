@@ -3,7 +3,7 @@ $date = new DateTime($post->creation_date);
 $replies = $post->getReplies();
 ?>
 
-<div class="media mj-post-outdoor mj-post <?= ($post->parent) ? 'mj-reply' : '' ;?>" 
+<div class="media mj-post-outdoor mj-post <?= $post->parent ? 'mj-reply' : '' ;?>" 
      title="Post #<?= $post->id ?>" 
      id="mj_post_<?= $post->id ?>"
      data-post-id="<?= $post->id ?>"
@@ -108,7 +108,7 @@ $replies = $post->getReplies();
             <?= \Yii::$app->view->renderFile(
                 "@app/views/plugins/post.php",
                 ['post' => $reply]
-            ); 
+            );
             ?>
          </div>
     <?php endforeach; ?>

@@ -56,7 +56,7 @@ class Category extends \yii\db\ActiveRecord {
     public function getCategoriesOf($userId) {
         $sql = '
             SELECT C.id,C.name,COUNT(P.ID) as total_post FROM MJ_CATEGORY C
-            JOIN MJ_POST P ON P.CATEGORY = C.ID AND P.AUTHOR = :userId
+            JOIN MJ_POST P ON P.CATEGORY = C.ID AND P.AUTHOR = :userId AND PARENT IS NULL
             GROUP BY C.ID
         ';
 

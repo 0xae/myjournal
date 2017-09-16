@@ -105,8 +105,8 @@ $scrip = <<<JS
                 $("#mj-composer-editor-$pluginId").text("Write...");
                 newPost.id = json.id;
                 ($onSave)(newPost);
-            }, function (error) {
-                $(onError)(error);
+            }, function (e) {
+                ($onError)(e);
             });
         });
 
