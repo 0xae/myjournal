@@ -58,7 +58,11 @@ class Post extends \yii\db\ActiveRecord {
                     ->one();
     }
 
-    public function getChildren() {
+    public function getReplies() {
+        # a post with parent wont have any child
+        if ($this->parent)
+            return [];
+
         return $this->hasMany(Post::className(), ['parent' => 'id'])
                     ->all();
     }

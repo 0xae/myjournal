@@ -340,7 +340,7 @@ body {
     text-decoration: none;
 }
 
-#mj-composer-editor {
+.mj-composer-content {
     border: 1px solid #A3EBCE; 
     border-radius: 3px;
     color: #666;
@@ -351,8 +351,12 @@ body {
     overflow-y: scroll;
 }
 
-#mj-composer-editor:focus,
-#mj-composer-editor:active {
+#postViewModal .mj-composer-content {
+    min-height: 82px;    
+}
+
+.mj-composer-content:focus,
+.mj-composer-content:active {
     border: 1px solid #A3EBCE !important; 
 }
 
@@ -364,29 +368,29 @@ body {
     color: #19CF86;
 }
 
-#mj-composer-editor .mj-post-img {
+.mj-composer-content .mj-post-img {
     margin-bottom: 20px;
     margin-top: 15px;
     display: block;
     width: 100%;
 }
 
-#mj-composer-editor .mj-post-img img:hover {
+.mj-composer-content .mj-post-img img:hover {
     cursor: pointer;
 }
 
-#mj-composer-editor .mj-post-img img {
+.mj-composer-content .mj-post-img img {
     max-height: 300px;
     max-width: 400px;
     /* border: 1px solid #A3EBCE; */
     border-radius: 3px;
 }
 
-#mj-composer-editor .mj-post-img img:hover {
+.mj-composer-content .mj-post-img img:hover {
     opacity: .7;
 }
 
-#mj-composer-editor .mj-post-img .fa-trash {
+.mj-composer-content .mj-post-img .fa-trash {
     font-size: 34px;
     color: #000;
 }
@@ -436,9 +440,19 @@ body {
 
 #mj-post-view {
     padding: 0px;
+    /*
     max-width: 600px;
     min-height: 400px;
+    */
+}
 
+.mj-special-h3 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5eeee;
 }
 
 #mj-timeline-ref {
@@ -454,6 +468,15 @@ body {
     margin-left: 20px;
     margin-top: 10px;    
     color: #ccc;
+}
+
+.mj-reply {
+}
+
+.mj-reply-seg {
+    padding: 10px;
+    background-color: red;
+    height: 100%;
 }
 
 .mj-calendar {
@@ -478,6 +501,14 @@ body {
 .mj-calendar h1 {
     margin:0px;
     font-size: 29px;
+}
+
+.mj-composer-reply {
+    padding: 10px;
+}
+
+.mj-post-outdoor{
+    border-bottom: 1px solid #f5eeee;
 }
 
 </style>

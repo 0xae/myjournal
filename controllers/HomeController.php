@@ -68,7 +68,7 @@ class HomeController extends \yii\web\Controller {
 
     public function actionTest() {
         $model = new ImgUpload;
-        return $this->renderPartial('test', [
+        return $this->render('test', [
             'model' => $model
         ]);
     }
