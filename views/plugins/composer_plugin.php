@@ -14,9 +14,11 @@ $postModel = new Post;
 </style>
 
 <div id="composer_<?= $pluginId ?>" class="mj-composer-instance">
+    <center>
     <div class="mj-post-content">
         <div class="mj-composer-content" id="mj-composer-editor-<?=$pluginId?>" contenteditable="true">Write...</div>
     </div>
+    </center>
 
     <div class="mj-post-details">
         <div class="pull-left" style="font-size: 18px;padding: 10px;">

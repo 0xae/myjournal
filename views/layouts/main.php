@@ -296,7 +296,7 @@ body {
 }
 
 #composerModal .modal-dialog {
-    width: 700px;
+    width: 600px;
 }
 
 #composerModal .modal-content {
@@ -349,6 +349,7 @@ body {
     min-height: 200px;    
     max-height: 500px;    
     overflow-y: scroll;
+    text-align: left;
 }
 
 #postViewModal .mj-composer-content {

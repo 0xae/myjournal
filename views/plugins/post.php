@@ -57,7 +57,6 @@ $date = new DateTime($post->creation_date);
             </li>
 
             <?php if (!$post->parent): ?>
-
                 <li role="presentation" class="" style="margin-left: 24px;" title="0 comments">
                     <a href="javascript:void(0)" style="color:#1da1f2;font-size:10px;padding: 0px;">
                         <strong>
@@ -66,7 +65,6 @@ $date = new DateTime($post->creation_date);
                         </strong>
                     </a>
                 </li>
-            
             <?php endif; ?>
 
             <li role="presentation" class="" style="margin-left: 24px;" title="views">
@@ -76,18 +74,16 @@ $date = new DateTime($post->creation_date);
                     </strong>
                 </a>
             </li>
-            
+
             <?php if (!$post->parent): ?>
-
-            <li role="presentation" title="category <?= $post->getCategory()->name; ?>" style="margin-left: 24px;">
-                <a href="index.php?r=home/index&id=<?= $post->getCategory()->id ?>" style="color:#777;font-size:11px;padding: 0px;margin-top: -1px;padding-left: 3px;padding-right: 3px;">                       
-                    <strong>
-                        <span class="fa fa-tag" style="font-size: 9px;"></span>
-                        <?= $post->getCategory()->name ?>
-                    </strong>
-                </a>
-            </li>
-
+                <li role="presentation" title="category <?= $post->getCategory()->name; ?>" style="margin-left: 24px;">
+                    <a href="index.php?r=home/index&id=<?= $post->getCategory()->id ?>" style="color:#777;font-size:11px;padding: 0px;margin-top: -1px;padding-left: 3px;padding-right: 3px;">                       
+                        <strong>
+                            <span class="fa fa-tag" style="font-size: 9px;"></span>
+                            <?= $post->getCategory()->name ?>
+                        </strong>
+                    </a>
+                </li>
             <?php endif; ?>
         </ul>
     </div>
