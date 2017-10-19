@@ -8,6 +8,7 @@ $replies = $post->getReplies();
      id="mj_post_<?= $post->id ?>"
      data-post-id="<?= $post->id ?>"
      data-post-author="<?= $post->getAuthor()->id ?>"
+     style="min-height: 300px"
      >
    
     <div class="media-left">
@@ -93,11 +94,13 @@ $replies = $post->getReplies();
 </div>
 
 <?php if (count($replies) == 0): ?>
+<!--
 <div class="mj-no-replies">
     <center>
     <h3 style="margin-top:30px;margin-bottom:30px;" class="mj-special-h3">No replies</h3>
     </center>
 </div>
+-->
 <?php endif; ?>
 
 <div class="mj-post-replies">
