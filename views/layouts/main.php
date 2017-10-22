@@ -248,7 +248,7 @@ body {
     border-color: transparent;
     border-radius: 15px;
     font-weight: bold;
-    color: #464242;
+    color: #efe9e9;
     /*
     font-size: 13px;
     padding: 6px 16px;
